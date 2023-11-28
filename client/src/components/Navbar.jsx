@@ -12,7 +12,8 @@ import {
   slideAnimation,
 } from "../config/motion";
 
-import { CustomButton, Menu } from "../components";
+import { Menu } from "../components";
+import { logo } from '../assets';
 
 const Navbar = ({props}) => {
   const snap = useSnapshot(state);
@@ -25,17 +26,17 @@ const Navbar = ({props}) => {
       {...fadeAnimation}
     >
       <div className="navbar w-full flex justify-between">
-        <CustomButton
-          type="filled"
-          title="Home"
-          handleClick={() => (
-            (state.intro = true), 
+        <img
+          src={logo}
+          alt="logo"
+          className="max-w-[100px] h-auto cursor-pointer"
+          onClick={() => (
+            (state.intro = true),
             (state.about = false),
-            (state.projects = false), 
+            (state.projects = false),
             (state.contact = false)
           )}
         />
-
         <Menu />
       </div>
     </motion.div>

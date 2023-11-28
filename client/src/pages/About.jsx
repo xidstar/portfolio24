@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import { useSnapshot } from "valtio";
 
@@ -12,36 +12,58 @@ import {
   slideAnimation,
 } from "../config/motion";
 
-import { CustomButton } from "../components";
+import { CustomButton, Tab, Bio, Skills, Resume } from "../components";
+import { AboutTabs } from '../config/constants';
 
 const About = () => {
   const snap = useSnapshot(state);
+
+  const [bio, setBio] = useState("");
+  const [skills, setSkills] = useState("");
+  const [resume, setResume] = useState("");
+  const [isActiveTab, setIsActiveTab] = useState("");
+
+  const generateTabContent = () => {
+    switch (isActiveTab) {
+      case "Bio":
+        return <Bio />;
+      case "Skills":
+        return <Skills />;
+      case "Resume":
+        return <Resume />;
+
+      default:
+        return null;
+    }
+  };
 
   return (
     <AnimatePresence>
       {snap.about && (
         <motion.section className="flex flex-col justify-center h-screen w-full p-4 max-w-screen-2xl mx-auto items-start">
           <motion.div
-            className="home-content flex flex-col w-full"
+            className="page-content flex flex-col w-full"
             {...headContainerAnimation}
           >
-            <motion.div {...headTextAnimation}>
-              <h3 className="head-text">Bio</h3>
-            </motion.div>
-
-            <motion.div {...headTextAnimation}>
-              <h3 className="text-2xl font-bold">Skills</h3>
-            </motion.div>
-
-            <motion.div className="flex flex-col" {...headContentAnimation}>
-              <p className="max-w-md font-normal text-gray-600 md:text-xl">
-                Resume
-              </p>
-            </motion.div>
+            {AboutTabs.map((tab) => (
+              <motion.div key={tab.title} {...headTextAnimation}>
+                <Tab
+                  tab={tab}
+                  handleClick={() => setIsActiveTab(tab.title)}
+                  customStyles={`${
+                    isActiveTab === tab.title
+                      ? "bg-tab-select scale-105 hover:scale-110"
+                      : "bg-tab-bg"
+                  }`}
+                />
+              </motion.div>
+            ))}
+            {generateTabContent()}
           </motion.div>
+
           <motion.div
             className="page-buttons flex w-full justify-center"
-            {...slideAnimation("up")}
+            {...headContentAnimation}
           >
             <CustomButton
               type="filled"

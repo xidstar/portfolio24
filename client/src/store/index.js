@@ -5,7 +5,7 @@ const state = proxy({
   about: false,
   projects: false,
   contact: false,
-  color: '#efbd48',
+  colors: ['#EFBD4E', '#e69cd8', '#8952bf', '#353934']
 });
 
 export default state;

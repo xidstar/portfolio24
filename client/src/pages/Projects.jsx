@@ -22,7 +22,7 @@ const Projects = () => {
       {snap.projects && (
         <motion.section className="flex flex-col justify-center h-screen w-full p-4 max-w-screen-2xl mx-auto items-start">
           <motion.div
-            className="home-content flex flex-col w-full"
+            className="page-content flex flex-col w-full"
             {...headContainerAnimation}
           >
             <motion.div>
@@ -37,7 +37,7 @@ const Projects = () => {
           </motion.div>
           <motion.div
             className="page-buttons flex w-full justify-center"
-            {...slideAnimation("up")}
+            {...headContentAnimation}
           >
             <CustomButton
               type="filled"

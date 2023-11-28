@@ -16,20 +16,30 @@ import state from "./store";
 
 function App() {
   const snap = useSnapshot(state);
-  const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
+
+  const BgColor = () => {
+    let color = snap.colors[0];
+
+    if (snap.about) {
+      color = snap.colors[1]
+    } else if (snap.projects) {
+      color = snap.colors[2];
+    } else if (snap.contact) {
+      color = snap.colors[3];
+    }
+
+    return color
+  }
 
   return (
     <main className="app transition-all ease-in relative">
-      <Navbar />
-
       <Canvas
         shadows
         camera={{ position: [0, 1, 5], fov: 30 }}
         style={{ position: "absolute" }}
       >
-        <color attach="background" args={[snap.color]} />
-
+        <color attach="background" args={[BgColor()]} />
         <Experience />
 
         <ScrollControls
@@ -38,6 +48,7 @@ function App() {
           horizontal={true}
         >
           <Scroll html className="w-full h-full overflow-hidden">
+            <Navbar />
             <Home />
             <About />
             <Projects />

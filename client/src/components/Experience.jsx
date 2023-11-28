@@ -1,7 +1,5 @@
 import {
   Environment,
-  OrbitControls,
-  Sky,
   ContactShadows,
 } from "@react-three/drei";
 import { Avatar } from "./Avatar";

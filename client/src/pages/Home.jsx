@@ -24,7 +24,7 @@ const Home = () => {
           {...slideAnimation("left")}
         >
           <motion.div
-            className="home-content flex flex-col w-full"
+            className="page-content flex flex-col w-full"
             {...headContainerAnimation}
           >
             <motion.div {...headTextAnimation}>

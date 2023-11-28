@@ -25,7 +25,7 @@ const Contact = () => {
           {...slideAnimation("left")}
         >
           <motion.div
-            className="home-content flex flex-col w-full"
+            className="page-content flex flex-col w-full"
             {...headContainerAnimation}
           >
             <motion.div {...headTextAnimation}>
@@ -34,7 +34,7 @@ const Contact = () => {
           </motion.div>
           <motion.div
             className="page-buttons flex w-full justify-center"
-            {...slideAnimation("up")}
+            {...headContentAnimation}
           >
             <CustomButton
               type="filled"
@@ -47,7 +47,9 @@ const Contact = () => {
             <CustomButton
               type="filled"
               title="Home"
-              handleClick={() => ((state.intro = true), (state.contact = false))}
+              handleClick={() => (
+                (state.intro = true), (state.contact = false)
+              )}
               customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg ml-2"
             />
           </motion.div>
