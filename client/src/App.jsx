@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 
 import { useSnapshot } from "valtio";
 import state from "./store";
+import { MotionConfig } from 'framer-motion';
 
 function App() {
   const snap = useSnapshot(state);
@@ -34,28 +35,39 @@ function App() {
 
   return (
     <main className="app transition-all ease-in relative">
-      <Canvas
-        shadows
-        camera={{ position: [0, 1, 5], fov: 30 }}
-        style={{ position: "absolute" }}
+      <MotionConfig
+        transition={{
+          type: "spring",
+          mass: 5,
+          stiffness: 200,
+          damping: 50,
+          restDelta: 0.0001,
+          duration: 1,
+        }}
       >
-        <color attach="background" args={[BgColor()]} />
-        <Experience />
-
-        <ScrollControls
-          // pages={3}
-          damping={0.1}
-          horizontal={true}
+        <Canvas
+          shadows
+          camera={{ position: [0, 1, 5], fov: 30 }}
+          style={{ position: "absolute" }}
         >
-          <Scroll html className="w-full h-full overflow-hidden">
-            <Navbar />
-            <Home />
-            <About />
-            <Projects />
-            <Contact />
-          </Scroll>
-        </ScrollControls>
-      </Canvas>
+          <color attach="background" args={[BgColor()]} />
+          <Experience />
+
+          <ScrollControls
+            // pages={3}
+            damping={0.1}
+            horizontal={true}
+          >
+            <Scroll html className="w-full h-full overflow-hidden">
+              <Navbar />
+              <Home />
+              <About />
+              <Projects />
+              <Contact />
+            </Scroll>
+          </ScrollControls>
+        </Canvas>
+      </MotionConfig>
     </main>
   );
 }

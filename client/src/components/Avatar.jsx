@@ -9,6 +9,7 @@ import { useControls } from "leva";
 import * as THREE from "three";
 import {easing} from "maath"
 import { useSnapshot } from "valtio";
+import {motion} from "framer-motion-3d"
 
 import state from "../store";
 
@@ -57,19 +58,25 @@ export function Avatar(props) {
     
     if (animation === "Jump") {
       actions[animation].setLoop(THREE.LoopOnce).clampWhenFinished = true;
-    } else {
+    } else if (animation === "Waving" || animation === "Salute") {
       actions[animation].setLoop(THREE.LoopRepeat, 3).clampWhenFinished = true;
     }
     
     actions[animation].reset().fadeIn(0.5).play();
     return () => {
       actions[animation].reset().fadeOut(0.5);
+  
     }
   }, [animation]);
 
   return (
     <group {...props} ref={group} dispose={null}>
-      <group rotation-x={-Math.PI / 2}>
+      <motion.group 
+        rotation-x={-Math.PI / 2}
+        animate={{
+          x: snap.projects ? 3 : 0,
+        }}
+      >
         <primitive object={nodes.Hips} />
         <skinnedMesh
           name="EyeLeft"
@@ -133,7 +140,7 @@ export function Avatar(props) {
           material={materials.Wolf3D_Glasses}
           skeleton={nodes.Wolf3D_Glasses.skeleton}
         />
-      </group>
+      </motion.group>
     </group>
   );
 }
