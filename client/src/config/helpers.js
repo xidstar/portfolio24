@@ -1,6 +1,38 @@
-export const bgColor = () => {
-  
-};
+import { useSnapshot } from "valtio";
+
+import state from "../store";
+
+
+export const avatarAnimation = () => {
+  const snap = useSnapshot(state);
+  if(snap.intro) {
+      return "Waving";
+  } 
+  else if(snap.about) {
+      return "Briefcase";
+  }
+  else if(snap.projects) {
+      return "Jump";
+  }
+  else {
+    return "Salute";
+  }
+}
+
+export const BgColor = () => {
+  const snap = useSnapshot(state);
+  let color = snap.colors[0];
+
+  if (snap.about) {
+    color = snap.colors[1]
+  } else if (snap.projects) {
+    color = snap.colors[2];
+  } else if (snap.contact) {
+    color = snap.colors[3];
+  }
+
+  return color
+}
 
 
 export const getContrastingColor = (color) => {

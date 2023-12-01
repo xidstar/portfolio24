@@ -3,7 +3,6 @@ import {
   ContactShadows,
 } from "@react-three/drei";
 import { Avatar } from "./Avatar";
-import { useControls } from "leva";
 import { motion } from "framer-motion-3d";
 import { framerMotionConfig } from "../config/constants";
 
@@ -12,8 +11,9 @@ import state from "../store";
 import { animate, useMotionValue } from "framer-motion";
 import { useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
+import { avatarAnimation } from "../config/helpers";
 
-export const Experience = (props) => {
+export const Experience = () => {
   const snap = useSnapshot(state);
 
   const cameraPositionX = useMotionValue();
@@ -30,14 +30,6 @@ export const Experience = (props) => {
     animate(cameraLookAtX, snap.about ? -1.5 : 0, {...framerMotionConfig});
   }, [snap.about])
 
-  const { animation } = useControls({
-    animation: {
-      value: "Salute",
-      options: ["Briefcase", "Jump", "Waving", "Salute"],
-    },
-  });
-
-  
 
   return (
     <>
@@ -56,7 +48,7 @@ export const Experience = (props) => {
           resolution={256}
           color="#000000"
         />
-        <Avatar animation={snap.intro ? "Waving" : "Salute"} />
+        <Avatar animation={avatarAnimation()} />
       </motion.group>
     </>
   );

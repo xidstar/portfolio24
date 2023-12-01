@@ -13,6 +13,7 @@ import {
 } from "../config/motion";
 
 import { CustomButton } from "../components";
+import { getContrastingColor } from "../config/helpers";
 
 const Contact = () => {
   const snap = useSnapshot(state);

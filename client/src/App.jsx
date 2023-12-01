@@ -4,14 +4,13 @@ import { Experience } from "./components/Experience";
 import { framerMotionConfig } from './config/constants';
 import Cursor from './components/Cursor';
 
-import { Scroll, ScrollControls, Html } from "@react-three/drei";
-import Interface from "./components/Interface";
+import { Scroll, ScrollControls } from "@react-three/drei";
 import Home from "./pages/Home";
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Navbar from "./components/Navbar";
 import Contact from './pages/Contact';
-
+import { BgColor, getContrastingColor } from "./config/helpers";
 
 import { useSnapshot } from "valtio";
 import state from "./store";
@@ -21,22 +20,10 @@ function App() {
   const snap = useSnapshot(state);
   const [menuOpened, setMenuOpened] = useState(false);
 
-  const BgColor = () => {
-    let color = snap.colors[0];
-
-    if (snap.about) {
-      color = snap.colors[1]
-    } else if (snap.projects) {
-      color = snap.colors[2];
-    } else if (snap.contact) {
-      color = snap.colors[3];
-    }
-
-    return color
-  }
+  BgColor();
 
   return (
-    <main className="app transition-all ease-in relative">
+    <main className={`app transition-all ease-in relative`}>
       <MotionConfig
         transition={{
           ...framerMotionConfig,

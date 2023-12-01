@@ -1,31 +1,33 @@
-import { BsPersonLinesFill } from "react-icons/bs";
-import { FaPersonDigging } from "react-icons/fa6";
-import { RiTodoFill } from "react-icons/ri";
+import { MdPersonAddAlt } from "react-icons/md";
+import { VscGraphLeft } from "react-icons/vsc";
+import { RiMailDownloadLine } from "react-icons/ri";
+
 import { redbtn, graybtn, blackbtn } from "../assets";
 
 export const AboutTabs = [
   {
     title: "Bio",
     img: graybtn,
-    icon: BsPersonLinesFill
+    icon: MdPersonAddAlt
   },
   {
     title: "Skills",
     img: graybtn,
-    icon: FaPersonDigging
+    icon: VscGraphLeft 
   },
   {
     title: "Resume",
     img: graybtn,
-    icon: RiTodoFill
+    icon: RiMailDownloadLine 
   },
 ]
 
 export const framerMotionConfig = {
   type: "spring",
   mass: 5,
-  stiffness: 200,
+  stiffness: 100,
   damping: 50,
   restDelta: 0.0001,
   duration: 1,
 }
+

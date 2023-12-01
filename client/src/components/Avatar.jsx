@@ -7,9 +7,8 @@ import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useControls } from "leva";
 import * as THREE from "three";
-import {easing} from "maath"
 import { useSnapshot } from "valtio";
-import {motion} from "framer-motion-3d"
+import {motion} from "framer-motion-3d";
 
 import state from "../store";
 
@@ -45,9 +44,6 @@ export function Avatar(props) {
   );
 
   useFrame((state) => {
-    // if(headFollow) {
-    //   group.current.getObjectByName("Head").lookAt(state.camera.position);
-    // }
     if(cursorFollow) {
       const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
       group.current.getObjectByName("Spine2").lookAt(target);
@@ -59,7 +55,7 @@ export function Avatar(props) {
     if (animation === "Jump") {
       actions[animation].setLoop(THREE.LoopOnce).clampWhenFinished = true;
     } else if (animation === "Waving" || animation === "Salute") {
-      actions[animation].setLoop(THREE.LoopRepeat, 3).clampWhenFinished = true;
+      actions[animation].setLoop(THREE.LoopRepeat, 2).clampWhenFinished = true;
     }
     
     actions[animation].reset().fadeIn(0.5).play();
@@ -74,7 +70,7 @@ export function Avatar(props) {
       <motion.group 
         rotation-x={-Math.PI / 2}
         animate={{
-          x: snap.projects ? 3 : 0,
+          x: snap.contact ? 1.5 : 0,
         }}
       >
         <primitive object={nodes.Hips} />

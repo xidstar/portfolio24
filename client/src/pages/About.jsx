@@ -52,8 +52,8 @@ const About = () => {
                   handleClick={() => setIsActiveTab(tab.title)}
                   customStyles={`${
                     isActiveTab === tab.title
-                      ? "bg-tab-select scale-105 hover:scale-110"
-                      : "bg-tab-bg"
+                      ? "bg-purple-700 scale-105 h-[130px]  hover:scale-110 text-white"
+                      : "bg-gray-200"
                   }`}
                 />
               </motion.div>
