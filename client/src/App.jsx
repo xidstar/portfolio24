@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
+import { framerMotionConfig } from './config/constants';
+import Cursor from './components/Cursor';
 
 import { Scroll, ScrollControls, Html } from "@react-three/drei";
 import Interface from "./components/Interface";
@@ -37,12 +39,7 @@ function App() {
     <main className="app transition-all ease-in relative">
       <MotionConfig
         transition={{
-          type: "spring",
-          mass: 5,
-          stiffness: 200,
-          damping: 50,
-          restDelta: 0.0001,
-          duration: 1,
+          ...framerMotionConfig,
         }}
       >
         <Canvas
@@ -67,6 +64,7 @@ function App() {
             </Scroll>
           </ScrollControls>
         </Canvas>
+        <Cursor />
       </MotionConfig>
     </main>
   );

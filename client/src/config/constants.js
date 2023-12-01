@@ -21,17 +21,11 @@ export const AboutTabs = [
   },
 ]
 
-// export const EditorTabs = [
-//   {
-//     name: "colorpicker",
-//     icon: swatch,
-//   },
-//   {
-//     name: "filepicker",
-//     icon: fileIcon,
-//   },
-//   {
-//     name: "texteditor",
-//     icon: txt,
-//   },
-// ];
+export const framerMotionConfig = {
+  type: "spring",
+  mass: 5,
+  stiffness: 200,
+  damping: 50,
+  restDelta: 0.0001,
+  duration: 1,
+}

@@ -31,10 +31,6 @@ html {
   @apply text-[4rem] xl:leading-[11rem] leading-[7rem] font-bold;
 }
 
-.download-btn {
-  @apply w-14 h-14 flex justify-center items-center rounded-full glassmorphism cursor-pointer outline-none;
-}
-
 .tabcontent-container {
   @apply glassmorphism max-w-[400px] md:max-w-[600px] h-[80%] border-[2px] rounded-lg flex flex-col justify-center items-center absolute right-0 left-0 top-0 bottom-0 m-auto;
 }
@@ -51,22 +47,6 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-input[type="file"] {
-  z-index: -1;
-  position: absolute;
-  opacity: 0;
-}
-
-.sketch-picker {
-  width: 170px !important;
-  background: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07) !important;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  border-radius: 6px !important;
-}
-
-.sketch-picker>div:nth-child(3) {
+.leva-c-kWgxhW {
   display: none !important;
 }

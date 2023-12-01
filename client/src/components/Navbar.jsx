@@ -25,7 +25,7 @@ const Navbar = ({props}) => {
       className="absolute z-10 top-5 w-screen px-5"
       {...fadeAnimation}
     >
-      <div className="navbar w-full flex justify-between">
+      <div className="navbar w-full flex justify-between items-center max-w-[90%] m-auto">
         <img
           src={logo}
           alt="logo"
