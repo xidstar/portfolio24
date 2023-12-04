@@ -70,7 +70,7 @@ export function Avatar(props) {
       <motion.group 
         rotation-x={-Math.PI / 2}
         animate={{
-          x: snap.contact ? 1.5 : 0,
+          x: snap.contact || snap.projects ? 1.5 : 0,
         }}
       >
         <primitive object={nodes.Hips} />

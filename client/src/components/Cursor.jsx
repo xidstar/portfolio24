@@ -68,7 +68,7 @@ const Cursor = () => {
   return (
     <>
       <div
-        className={`z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform bg-red-500 w-3 h-3 `}
+        className={`z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform border-solid border-2 border-red-500 w-5 h-5 `}
         ref={cursorOutline}
       ></div>
     </>

@@ -37,7 +37,7 @@ export const Experience = () => {
       <motion.group
         position-y={-1}
         // animate={{
-        //   x: snap.intro || snap.about ? 0 : 1,
+        //   x: snap.projects || snap.contact ? 0 : 1,
         // }}
       >
         <ContactShadows

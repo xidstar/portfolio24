@@ -10,6 +10,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Navbar from "./components/Navbar";
 import Contact from './pages/Contact';
+import { Menu } from './components';
 import { BgColor, getContrastingColor } from "./config/helpers";
 
 import { useSnapshot } from "valtio";
@@ -19,6 +20,7 @@ import { MotionConfig } from 'framer-motion';
 function App() {
   const snap = useSnapshot(state);
   const [menuOpened, setMenuOpened] = useState(false);
+  
 
   BgColor();
 
