@@ -25,10 +25,19 @@ export const Experience = () => {
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
   })
 
+  // useEffect(() => {
+  //   animate(cameraPositionX, snap.about ? 3 : 0, {...framerMotionConfig});
+  //   animate(cameraLookAtX, snap.about ? -1.5 : 0, {...framerMotionConfig});
+  // }, [snap.about])
+
   useEffect(() => {
-    animate(cameraPositionX, snap.about ? 3 : 0, {...framerMotionConfig});
-    animate(cameraLookAtX, snap.about ? -1.5 : 0, {...framerMotionConfig});
-  }, [snap.about])
+    animate(cameraPositionX, snap.isMenuOpen ? -4: 0, {
+      ...framerMotionConfig,
+    });
+    animate(cameraLookAtX, snap.isMenuOpen ? 0 : 0, {
+      ...framerMotionConfig,
+    });
+  }, [snap.isMenuOpen]);
 
 
   return (

@@ -35,7 +35,7 @@ const Home = () => {
 
             <motion.div {...headTextAnimation}>
               <h3 className="text-2xl font-bold">
-                Front End / Interactive
+                Front End / Creative
                 <br className="hidden sm:block" />
                 Developer
               </h3>

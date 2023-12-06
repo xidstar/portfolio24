@@ -33,7 +33,7 @@ const About = () => {
         return <Resume />;
 
       default:
-        return null;
+        return <Bio />;
     }
   };
 
@@ -48,6 +48,7 @@ const About = () => {
             {AboutTabs.map((tab) => (
               <motion.div key={tab.title} {...headTextAnimation}>
                 <Tab
+                {...slideAnimation}
                   tab={tab}
                   handleClick={() => setIsActiveTab(tab.title)}
                   customStyles={`${

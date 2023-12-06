@@ -4,7 +4,7 @@ const Bio = () => {
   return (
     <div className="tabcontent-container p-5">
       <h3 className="text-4xl font-bold py-10 relative">About Me</h3>
-      <p className="text-2xl text-center">
+      <p className="text-xl text-center">
         Translating ideas and brand values into eye-catching user-centered
         digital solutions.
         <br />

@@ -17,9 +17,9 @@ import { useSnapshot } from "valtio";
 import state from "./store";
 import { MotionConfig } from 'framer-motion';
 
-function App() {
+function App(props) {
   const snap = useSnapshot(state);
-  const [menuOpened, setMenuOpened] = useState(false);
+  const {menuOpened, setMenuOpened} = props;
   
 
   BgColor();
@@ -37,7 +37,7 @@ function App() {
           style={{ position: "absolute" }}
         >
           <color attach="background" args={[BgColor()]} />
-          <Experience />
+          <Experience menuOpened={menuOpened} />
 
           <ScrollControls
             // pages={3}

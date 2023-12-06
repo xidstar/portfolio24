@@ -6,7 +6,9 @@ const state = proxy({
   projects: false,
   contact: false,
   colors: ['#e69d00', '#e69cd8', '#8952bf', '#353934'],
-  isLogo: false
+  isLogo: false,
+  isMenuOpen: false,
+  carouselWidth: 0
 });
 
 export default state;

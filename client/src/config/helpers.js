@@ -5,6 +5,9 @@ import state from "../store";
 
 export const avatarAnimation = () => {
   const snap = useSnapshot(state);
+  if(snap.isMenuOpen) {
+      return "Pow";
+  } 
   if(snap.intro) {
       return "Waving";
   } 

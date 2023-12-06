@@ -2,7 +2,7 @@ import React from "react";
 import { useSnapshot } from "valtio";
 import state from "../store";
 
-const Tab = ({ tab, isActiveTab, handleClick, customStyles }) => {
+const Tab = ({ tab, handleClick, customStyles }) => {
   const snap = useSnapshot(state);
 
   return (
@@ -12,7 +12,6 @@ const Tab = ({ tab, isActiveTab, handleClick, customStyles }) => {
       onClick={handleClick}
     >
       <h3 className="uppercase">{tab.title}</h3>
-      {isActiveTab === tab.title ? <h2>Active</h2> : ""}
       {<tab.icon className="text-[6rem] absolute -right-3 top-3" />}
     </div>
   );

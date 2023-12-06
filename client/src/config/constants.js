@@ -2,7 +2,7 @@ import { MdPersonAddAlt } from "react-icons/md";
 import { VscGraphLeft } from "react-icons/vsc";
 import { RiMailDownloadLine } from "react-icons/ri";
 
-import { redbtn, graybtn, blackbtn } from "../assets";
+import { redbtn, graybtn, blackbtn, tshirt, dashboard, portfolio, barbershop } from "../assets";
 
 export const AboutTabs = [
   {
@@ -31,3 +31,29 @@ export const framerMotionConfig = {
   duration: 1,
 }
 
+export const projects = [
+  {
+    title: "Portfolio 2023",
+    description: "React, Sass",
+    url: "https://sidneyo.netlify.app/",
+    img: portfolio,
+  },
+  {
+    title: 'Cybersecurity Dashboard',
+    description: 'React, Tailwind, Leaflet, ChartJs',
+    url: 'https://cybersecurity-dashboard.netlify.app/',
+    img: dashboard,
+  },
+  {
+    title: `Tshirt Customizer`,
+    description: 'React, Tailwind, ThreeJS',
+    url: 'https://clothing-customizer.netlify.app/',
+    img: tshirt
+  },
+  {
+    title: 'The W HairLoft',
+    description: 'Gatsby, Contentful CMS, GraphQL',
+    url: 'https://thewhairloft.netlify.app/',
+    img: barbershop
+  },
+]

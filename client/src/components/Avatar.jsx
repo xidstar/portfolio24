@@ -27,11 +27,13 @@ export function Avatar(props) {
   const {animations: wavingAnimation} = useFBX("animations/Waving.fbx");
   const {animations: saluteAnimation} = useFBX("animations/Salute.fbx");
   const { animations: briefcaseAnimation } = useFBX("animations/Briefcase Idle.fbx");
+  const { animations: powAnimation } = useFBX("animations/Hands Forward Gesture.fbx");
   
   jumpAnimation[0].name = "Jump";
   wavingAnimation[0].name = "Waving";
   saluteAnimation[0].name = "Salute";
   briefcaseAnimation[0].name = "Briefcase";
+  powAnimation[0].name = "Pow";
 
   const { actions } = useAnimations(
     [
@@ -39,6 +41,7 @@ export function Avatar(props) {
       jumpAnimation[0],
       wavingAnimation[0],
       saluteAnimation[0],
+      powAnimation[0]
     ],
     group
   );
@@ -70,7 +73,7 @@ export function Avatar(props) {
       <motion.group 
         rotation-x={-Math.PI / 2}
         animate={{
-          x: snap.contact || snap.projects ? 1.5 : 0,
+          x: snap.contact || snap.projects || snap.about ? 1.2 : 0,
         }}
       >
         <primitive object={nodes.Hips} />
