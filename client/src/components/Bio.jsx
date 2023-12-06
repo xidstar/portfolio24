@@ -4,17 +4,13 @@ const Bio = () => {
   return (
     <div className="tabcontent-container p-5">
       <h3 className="text-4xl font-bold py-10 relative">About Me</h3>
-      <p className="text-xl text-center">
-        Translating ideas and brand values into eye-catching user-centered
-        digital solutions.
-        <br />
-        I'm a creative developer with a keen focus on interactivity, motion
+      <h4 className="font-bold italic text-xl pb-10">"Passionately Curious..."</h4>
+      <p className="text-xl text-left">
+        I'm a creative web developer with a keen focus on interactivity, motion
         design and building appealing web experiences. I believe in crafting web
-        experiences that are not just functional but also captivating. With the
-        added experience of working as a UI/UX developer, I've helped think tank
-        experts build a web presence and hone their content, giving them an
-        opportunity to connect with their audiences in clearer, more imaginative
-        ways.
+        experiences that are not just functional but also captivating. I'm
+        passionate about translating ideas and brand values into eye-catching
+        user-centered digital solutions.
       </p>
     </div>
   );

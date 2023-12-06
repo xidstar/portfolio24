@@ -1,16 +1,10 @@
 import React, {useEffect} from 'react';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
 import { VscChromeClose } from "react-icons/vsc";
 import { useSnapshot } from "valtio";
 import state from '../store';
 
-import {
-  headContainerAnimation,
-  headContentAnimation,
-  headTextAnimation,
-  slideAnimation,
-} from "../config/motion";
 
 const Menu = () => {
   const snap = useSnapshot(state);
@@ -36,7 +30,7 @@ const Menu = () => {
       >
         <div className="flex gap-10 flex-col text-3xl">
           <MenuButton
-            label="Home"
+            label="Intro"
             onClick={() => (
               (state.intro = true),
               (state.about = false),

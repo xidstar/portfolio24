@@ -47,7 +47,7 @@ const Contact = () => {
             />
             <CustomButton
               type="filled"
-              title="Home"
+              title="Intro"
               handleClick={() => (
                 (state.intro = true), (state.contact = false)
               )}

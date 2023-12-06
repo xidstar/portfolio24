@@ -1,6 +1,7 @@
 import React from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {useSnapshot} from 'valtio';
+import { box } from '../assets';
 
 import state from '../store';
 

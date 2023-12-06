@@ -22,6 +22,26 @@ export const avatarAnimation = () => {
   }
 }
 
+export const bgText = () => {
+  const snap = useSnapshot(state);
+  
+  if(snap.isMenuOpen) {
+      return "Menu.";
+  } 
+  if(snap.intro) {
+      return "Intro.";
+  } 
+  else if(snap.about) {
+      return "Bio.";
+  }
+  else if(snap.projects) {
+      return "Projects.";
+  }
+  else {
+    return "Contact.";
+  }
+}
+
 export const BgColor = () => {
   const snap = useSnapshot(state);
   let color = snap.colors[0];
@@ -53,3 +73,4 @@ export const getContrastingColor = (color) => {
   // Return black or white depending on the brightness
   return brightness > 128 ? "black" : "white";
 };
+

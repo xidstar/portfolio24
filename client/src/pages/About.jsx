@@ -21,7 +21,7 @@ const About = () => {
   const [bio, setBio] = useState("");
   const [skills, setSkills] = useState("");
   const [resume, setResume] = useState("");
-  const [isActiveTab, setIsActiveTab] = useState("");
+  const [isActiveTab, setIsActiveTab] = useState("Bio");
 
   const generateTabContent = () => {
     switch (isActiveTab) {
@@ -68,7 +68,7 @@ const About = () => {
           >
             <CustomButton
               type="filled"
-              title="Home"
+              title="Intro"
               handleClick={() => ((state.intro = true), (state.about = false))}
               customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg mr-2"
             />
