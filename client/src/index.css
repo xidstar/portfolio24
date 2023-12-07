@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -29,7 +29,7 @@ html {
 }
 
 .head-text {
-  @apply text-[4rem] xl:leading-[11rem] leading-[7rem] font-bold;
+  @apply text-[4rem] xl:leading-[4.5rem] leading-[2rem] font-bold;
 }
 
 .tabcontent-container {
@@ -50,4 +50,43 @@ html {
 
 .leva-c-kWgxhW {
   display: none !important;
+}
+
+.cls-1 {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-width: 7px;
+  fill-rule: evenodd;
+}
+
+.color-text-wrapper {
+  display: inline-flex;
+}
+
+.color-text-wrapper svg {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.color-text {
+  font-family: 'Permanent Marker', cursive;
+  background-image: -webkit-linear-gradient(92deg, #000000, #feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* -webkit-animation: hue 10s infinite linear; */
+  padding: 10px 20px;
+}
+
+@keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }
