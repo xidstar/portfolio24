@@ -16,10 +16,11 @@ export function Avatar(props) {
   const snap = useSnapshot(state);
 
   const {animation} = props;
-  const { headFollow, cursorFollow } = useControls({
-    headFollow: false,
+
+  let { cursorFollow } = useControls({
     cursorFollow: false,
   });
+
   const group = useRef();
   const { nodes, materials } = useGLTF("models/65551cc6f1a79ed2ebc2c565.glb");
 
@@ -54,11 +55,21 @@ export function Avatar(props) {
   })
 
   useEffect(() => {
-    
+    if(snap.intro) {
+      cursorFollow = true;
+    }
+    if(snap.isMenuOpen) {
+      cursorFollow = false;
+    }
+
     if (animation === "Jump") {
       actions[animation].setLoop(THREE.LoopOnce).clampWhenFinished = true;
-    } else if (animation === "Waving" || animation === "Salute") {
+    } 
+    else if (animation === "Salute") {
       actions[animation].setLoop(THREE.LoopRepeat, 2).clampWhenFinished = true;
+    }
+    else if (animation === "Waving") {
+      actions[animation].setLoop(THREE.LoopRepeat, 4).clampWhenFinished = true;
     }
     
     actions[animation].reset().fadeIn(0.5).play();
