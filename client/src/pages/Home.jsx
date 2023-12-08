@@ -1,7 +1,6 @@
 import React from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {useSnapshot} from 'valtio';
-import { box } from '../assets';
 
 import state from '../store';
 
@@ -12,7 +11,7 @@ import {
   slideAnimation
 } from '../config/motion';
 
-import { CustomButton } from '../components';
+import { CustomButton, Underline } from '../components';
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -34,18 +33,7 @@ const Home = () => {
                 <span className='color-text-wrapper relative'>
                   <span className="color-text">Sid!</span>
 
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="90.969"
-                    height="8.625"
-                    viewBox="0 0 90.969 8.625"
-                  >
-                    <path
-                      class="cls-1"
-                      d="M309.023,712.81s45.958-7.708,85.974-.636"
-                      transform="translate(-306.531 -706.688)"
-                    />
-                  </svg>
+                  <Underline />
                 </span>
               </h1>
               <br />
@@ -62,13 +50,6 @@ const Home = () => {
                 Developer
               </h3>
             </motion.div>
-
-            {/* <motion.div className="flex flex-col" {...headContentAnimation}>
-              <p className="max-w-md font-normal text-gray-600 md:text-xl">
-                I develop websites, user interfaces, web applications, 2D and 3D
-                visuals.
-              </p>
-            </motion.div> */}
 
             <CustomButton
               type="filled"

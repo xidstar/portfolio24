@@ -24,28 +24,20 @@ const Projects = () => {
   return (
     <AnimatePresence>
       {snap.projects && (
-        <motion.section className="flex flex-col justify-center h-screen w-full p-4 max-w-screen-2xl mx-auto items-start">
+        <>
+          <motion.section className="flex justify-start items-center h-screen w-full p-4 max-w-screen-2xl mx-auto ">
+            <motion.div
+              className="tabs flex flex-col w-full h-full xl:w-2/3 xl:h-2/3 glassmorphism p-3 xl:p-10 rounded-lg"
+              {...headTextAnimation}
+            ></motion.div>
+          </motion.section>
           <motion.div
-            ref={boxRef}
-            className="carousel w-3/5 h-full cursor-grab overflow-hidden flex items-center"
-          >
-            {projects.map((project, index) => (
-              <img
-                key={"project_" + index}
-                src={project.img}
-                alt={project.title}
-                className="rounded-xs h-auto w-full rounded-xl mx-5 pointer-events-none"
-              />
-            ))}
-          </motion.div>
-
-          <motion.div
-            className="page-buttons flex w-full justify-center"
+            className="page-buttons absolute flex w-full justify-center bottom-10"
             {...headContentAnimation}
           >
             <CustomButton
               type="filled"
-              title="About"
+              title="Bio"
               handleClick={() => (
                 (state.about = true), (state.projects = false)
               )}
@@ -55,12 +47,12 @@ const Projects = () => {
               type="filled"
               title="Contact"
               handleClick={() => (
-                (state.contact = true), (state.projects = false)
+                (state.projects = false), (state.contact = true)
               )}
               customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg ml-2"
             />
           </motion.div>
-        </motion.section>
+        </>
       )}
     </AnimatePresence>
   );

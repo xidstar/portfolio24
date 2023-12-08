@@ -3,8 +3,10 @@ import { useSnapshot } from "valtio";
 import state from "../store";
 
 
+
 export const avatarAnimation = () => {
   const snap = useSnapshot(state);
+
   if(snap.isMenuOpen) {
       return "Pow";
   } 
