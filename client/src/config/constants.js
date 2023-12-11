@@ -1,25 +1,16 @@
-import { MdPersonAddAlt } from "react-icons/md";
-import { VscGraphLeft } from "react-icons/vsc";
-import { RiMailDownloadLine } from "react-icons/ri";
+import { portfolio, barbershop, dashboard, tshirt } from "../assets";
 
-import { redbtn, graybtn, blackbtn, tshirt, dashboard, portfolio, barbershop } from "../assets";
 
 export const AboutTabs = [
   {
     title: "Bio",
-    img: graybtn,
-    icon: MdPersonAddAlt
   },
   {
     title: "Skills",
-    img: graybtn,
-    icon: VscGraphLeft 
   },
-  {
-    title: "Resume",
-    img: graybtn,
-    icon: RiMailDownloadLine 
-  },
+  // {
+  //   title: "Resume",
+  // },
 ]
 
 export const framerMotionConfig = {
@@ -55,5 +46,32 @@ export const projects = [
     description: 'Gatsby, Contentful CMS, GraphQL',
     url: 'https://thewhairloft.netlify.app/',
     img: barbershop
+  },
+]
+
+export const skillset = [
+  {
+    name: "React JS",
+    level: 80,
+  },
+  {
+    name: "Javascript",
+    level: 90,
+  },
+  {
+    name: "Threejs / React Three Fiber",
+    level: 70,
+  },
+  {
+    name: "Nextjs",
+    level: 60,
+  },
+  {
+    name: "Nodejs",
+    level: 70,
+  },
+  {
+    name: ".Net Framework",
+    level: 80,
   },
 ]

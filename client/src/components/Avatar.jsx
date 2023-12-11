@@ -69,7 +69,7 @@ export function Avatar(props) {
       actions[animation].setLoop(THREE.LoopRepeat, 2).clampWhenFinished = true;
     }
     else if (animation === "Waving") {
-      actions[animation].setLoop(THREE.LoopRepeat, 4).clampWhenFinished = true;
+      actions[animation].setLoop(THREE.LoopRepeat, 3).clampWhenFinished = true;
     }
     
     actions[animation].reset().fadeIn(0.5).play();

@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import { avatarAnimation } from "../config/helpers";
 
+
 export const Experience = () => {
   const snap = useSnapshot(state);
 

@@ -17,10 +17,6 @@ import { AboutTabs } from '../config/constants';
 
 const About = () => {
   const snap = useSnapshot(state);
-
-  const [bio, setBio] = useState("");
-  const [skills, setSkills] = useState("");
-  const [resume, setResume] = useState("");
   const [isActiveTab, setIsActiveTab] = useState("Bio");
 
   const generateTabContent = () => {
@@ -43,17 +39,17 @@ const About = () => {
         <>
           <motion.section className="flex justify-start items-center h-screen w-full p-4 max-w-screen-2xl mx-auto ">
             <motion.div
-              className="content-wrapper flex flex-col w-full h-full xl:w-2/3 xl:h-2/3 glassmorphism p-3 xl:p-10 rounded-lg"
+              className={`content-wrapper flex flex-col w-full h-full xl:w-2/3 xl:h-2/3 p-3 xl:p-10 rounded-lg glassmorphism`}
               {...headTextAnimation}
             >
-              <div className="tab-title-wrapper flex flex-col items-center justify-center py-10">
-                <h3 className="text-4xl font-bold py-2 text-center">
+              <div className="tab-title-wrapper flex flex-col items-center justify-center pb-10">
+                {/* <h3 className="text-4xl font-bold py-2 text-gray-800">
                   About Me
-                </h3>
-                <Underline />
+                </h3> */}
+                {/* <Underline /> */}
               </div>
 
-              <div className="btn-wrapper flex gap-2 justify-between w-full">
+              <div className="btn-wrapper flex justify-center gap-10 w-full">
                 {AboutTabs.map((tab) => (
                   <motion.div key={tab.title}>
                     <Tab
@@ -69,7 +65,7 @@ const About = () => {
                   </motion.div>
                 ))}
               </div>
-              <div className="content-wrapper pt-10">
+              <div className="content-wrapper xl:pt-10">
                 {generateTabContent()}
               </div>
             </motion.div>

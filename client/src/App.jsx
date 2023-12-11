@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 import { framerMotionConfig } from './config/constants';
@@ -10,7 +10,6 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Navbar from "./components/Navbar";
 import Contact from './pages/Contact';
-import { Menu } from './components';
 import { BgColor, getContrastingColor, bgText } from "./config/helpers";
 
 import { useSnapshot } from "valtio";
@@ -19,7 +18,6 @@ import { MotionConfig } from 'framer-motion';
 
 function App(props) {
   const snap = useSnapshot(state);
-  const {menuOpened, setMenuOpened} = props;
   
 
   BgColor();
@@ -38,8 +36,8 @@ function App(props) {
         >
           {/* <OrbitControls /> */}
           <color attach="background" args={[BgColor()]} />
-          <Experience menuOpened={menuOpened} />
-
+          <Experience />
+          
           <ScrollControls
             // pages={3}
             damping={0.1}

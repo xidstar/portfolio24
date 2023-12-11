@@ -32,7 +32,6 @@ const Home = () => {
                 Hi, I'm
                 <span className='color-text-wrapper relative'>
                   <span className="color-text">Sid!</span>
-
                   <Underline />
                 </span>
               </h1>
@@ -44,7 +43,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div {...headTextAnimation}>
-              <h3 className="text-2xl font-bold">
+              <h3 className="text-xl xl:text-2xl font-bold">
                 Front End / Creative
                 <br className="hidden sm:block" />
                 Developer

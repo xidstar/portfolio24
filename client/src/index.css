@@ -71,10 +71,19 @@ html {
 
 .color-text {
   font-family: 'Permanent Marker', cursive;
-  background-image: -webkit-linear-gradient(92deg, #000000, #feab3a);
+  background-image: -webkit-linear-gradient(92deg, #000000, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* -webkit-animation: hue 10s infinite linear; */
+  padding: 10px 20px;
+}
+
+.color-bg {
+  font-family: 'Permanent Marker', cursive;
+  background-image: -webkit-linear-gradient(92deg, #000000, #7e22ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: hue 10s infinite linear;
   padding: 10px 20px;
 }
 
