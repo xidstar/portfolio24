@@ -74,6 +74,7 @@ const Carousel = () => {
               className="w-full h-full object-cover opacity-90"
               key={project.title}
               src={projects[currentPage].img}
+              loading="lazy"
             />
           ))}
         </div>
