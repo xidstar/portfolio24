@@ -37,7 +37,7 @@ const Home = () => {
               </h1>
               <br />
               <h3 className="font-bold text-3xl">
-                I develop websites, user interfaces, web applications, & 2D and
+                I develop websites, user interfaces, web applications, and 2D &
                 3D visuals.
               </h3>
             </motion.div>

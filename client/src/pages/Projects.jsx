@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSnapshot } from "valtio";
 
@@ -13,25 +13,26 @@ import {
 } from "../config/motion";
 
 import { CustomButton } from "../components";
-import { projects } from "../config/constants";
+import Carousel from "../components/Carousel";
 
 const Projects = () => {
   const snap = useSnapshot(state);
-
+  
 
 
   return (
     <AnimatePresence>
       {snap.projects && (
         <>
-          <motion.section
-            className="flex justify-start items-center h-screen w-full p-4 max-w-screen-2xl mx-auto "
-          >
+          <motion.section className="flex justify-start items-center h-screen w-full p-4 max-w-screen-2xl mx-auto ">
             <motion.div
-              className="tabs flex flex-col w-full h-full xl:w-2/3 xl:h-2/3 glassmorphism p-3 xl:p-10 rounded-lg"
+              className="tabs flex flex-col w-full h-[70%] xl:w-2/3 xl:h-2/3 glassmorphism rounded-lg relative"
               {...headTextAnimation}
-            ></motion.div>
+            >
+              <Carousel />
+            </motion.div>
           </motion.section>
+
           <motion.div
             className="page-buttons absolute flex w-full justify-center bottom-10"
             {...headContentAnimation}

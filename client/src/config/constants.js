@@ -30,14 +30,14 @@ export const projects = [
     img: portfolio,
   },
   {
-    title: 'Cybersecurity Dashboard',
+    title: 'Cyber Dashboard',
     description: 'React, Tailwind, Leaflet, ChartJs',
     url: 'https://cybersecurity-dashboard.netlify.app/',
     img: dashboard,
   },
   {
     title: `Tshirt Customizer`,
-    description: 'React, Tailwind, ThreeJS',
+    description: 'React Three Fiber, Tailwind',
     url: 'https://clothing-customizer.netlify.app/',
     img: tshirt
   },

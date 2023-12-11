@@ -1,6 +1,10 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react';
+import { useSnapshot } from "valtio";
+
+import state from "../store";
 
 const Cursor = () => {
+const snap = useSnapshot(state);
   const CURSOR_SPEED = 0.16;
 
   let mouseX = 0;
@@ -68,7 +72,9 @@ const Cursor = () => {
   return (
     <>
       <div
-        className={`z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform border-solid border-2 border-red-500 w-5 h-5 `}
+        className={`z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform border-solid border-2 w-10 h-10 ${
+          snap.intro || snap.about ? "border-slate-700" : "border-slate-400"
+        } `}
         ref={cursorOutline}
       ></div>
     </>

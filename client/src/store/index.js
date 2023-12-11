@@ -5,7 +5,7 @@ const state = proxy({
   about: false,
   projects: false,
   contact: false,
-  colors: ['#ffa441', '#e99cc3', '#8952bf', '#353934'],
+  colors: ['#ffa441', '#bc8e96', '#8952bf', '#353934'],
   isLogo: false,
   isMenuOpen: false,
   carouselWidth: 0
