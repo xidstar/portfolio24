@@ -8,7 +8,6 @@ const state = proxy({
   colors: ['#ffa441', '#bc8e96', '#8952bf', '#353934'],
   isLogo: false,
   isMenuOpen: false,
-  carouselWidth: 0
 });
 
 export default state;

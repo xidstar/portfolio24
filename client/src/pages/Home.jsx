@@ -30,7 +30,7 @@ const Home = () => {
             <motion.div {...headTextAnimation}>
               <h1 className="head-text">
                 Hi, I'm
-                <span className='color-text-wrapper relative'>
+                <span className='color-text-wrapper relative pl-5'>
                   <span className="color-text">Sid!</span>
                   <Underline />
                 </span>
