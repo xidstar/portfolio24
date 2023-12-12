@@ -58,7 +58,9 @@ const Carousel = () => {
             <h3 className="font-bold pb-5 text-xl xl:text-3xl">
               {projects[currentPage].title}
             </h3>
-            <p className="text-lg">{projects[currentPage].description}</p>
+            <p className="text-lg">
+              {projects[currentPage].description}
+            </p>
             <a
               href={projects[currentPage].url}
               target="_blank"
