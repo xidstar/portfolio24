@@ -52,7 +52,7 @@ const Home = () => {
 
             <CustomButton
               type="next"
-              title="Scout &nbsp;"
+              title="Scout"
               handleClick={() => ((state.intro = false), (state.about = true))}
               customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg"
             />

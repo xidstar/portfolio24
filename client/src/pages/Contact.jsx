@@ -64,14 +64,14 @@ const Contact = () => {
           >
             <CustomButton
               type="back"
-              title=" &nbsp;Projects"
+              title=" Projects"
               handleClick={() => (
                 (state.projects = true), (state.contact = false)
               )}
             />
             <CustomButton
               type="next"
-              title="Intro &nbsp;"
+              title="Intro"
               handleClick={() => (
                 (state.intro = true), (state.contact = false)
               )}

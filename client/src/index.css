@@ -72,21 +72,15 @@ html {
 .custom-btn:hover .svg-wrapper {
   width: 100%;
   height: 100%;
-  left: 0;
-  justify-content: flex-end;
-  padding: 10px;
+  transition: all .2s ease-in-out;
 }
 
 .hover-text {
-  transform: translateX(-100%);
-  transition: all .2s ease-in;
-  opacity: 0;
+  display: none;
 }
 
 .custom-btn:hover .hover-text {
-  margin-bottom: 0;
-  transform: translateX(0);
-  opacity: 1;
+  display: flex;
 }
 
 .color-text {

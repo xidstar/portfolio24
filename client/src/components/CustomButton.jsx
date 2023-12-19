@@ -5,57 +5,26 @@ import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 
 
 const CustomButton = ({title, type, handleClick}) => {
-  const snap = useSnapshot(state);
+  const snap = useSnapshot(state); 
 
-  // const getBgColor = (type) => {
-  //   if (snap.intro && type === "next") {
-  //     return "#bc8e96"
-  //   }
-  //   else if (snap.about && type === "back") {
-  //     return "#ffa441";
-  //   }
-  //   else if (snap.about && type === "next") {
-  //     return "#8952bf";
-  //   }
-  //   else if (snap.projects && type === "back") {
-  //     return "#bc8e96";
-  //   }
-  //   else if (snap.projects && type === "next") {
-  //     return "#353934";
-  //   }
-  // } 
-
-  const generateStyle = (type) => {
-    if(type === "back") {
-      return (
-        <div
-          className={`svg-wrapper flex justify-center items-center w-10 h-10 rounded-full bg-slate-300 transition-all ease-in-out absolute top-0 bottom-0 right-2 m-auto z-1`}
-        >
-          <GoArrowLeft />
-        </div>
-      );
-    }
-    else if(type === "next") {
-      return (
-        <div
-          className={`svg-wrapper flex justify-center items-center w-10 h-10 rounded-full bg-slate-300 transition-all ease-in-out absolute top-0 bottom-0 left-2 m-auto z-1`}
-        >
-          <GoArrowRight />
-        </div>
-      );
-    }
-  }
   return (
     <button
-      className={`custom-btn flex items-center justify-end w-[10rem] h-[3.5rem] bg-[${
+      className={`custom-btn relative flex items-center justify-center w-[10rem] h-[3.5rem] bg-[${
         snap.color
-      }] border-2 border-slate-700 text-xl font-semibold py-1.5 rounded-full text-slate-800 px-2 mx-2 overflow-hidden relative ${
-        type === "back" ? "flex-row-reverse" : ""
-      } hover:flex-row-reverse`}
+      }] border-2 hover:border-none text-xl font-semibold hover:font-normal capitalize py-1.5 rounded-full mx-2 overflow-hidden ${
+        snap.projects || snap.contact
+          ? "text-slate-300 border-slate-400"
+          : "text-slate-700 border-slate-700"
+      }`}
       onClick={handleClick}
     >
-      {generateStyle(type)}
-      <p className={`hover-text z-2 relative flex justify-center text-center`}>{title}</p>
+      <div
+        className={`svg-wrapper bg-purple-700 text-white flex justify-center items-center w-10 h-10 rounded-full hover:justify-around absolute top-0 bottom-0 m-auto 
+        ${ type === "back" ? "right-2" : "left-2 flex-row-reverse" } `}
+      >
+        {type === "back" ? <GoArrowLeft /> : <GoArrowRight />}
+        <p className="hover-text">{title}</p>
+      </div>
       <p className="">{type}</p>
     </button>
   );

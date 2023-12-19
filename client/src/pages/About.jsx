@@ -74,7 +74,7 @@ const About = () => {
           >
             <CustomButton
               type="back"
-              title=" &nbsp;Intro"
+              title=" Intro"
               handleClick={() => ((state.intro = true), (state.about = false))}
             />
             <CustomButton
