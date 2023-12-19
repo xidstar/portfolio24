@@ -73,18 +73,16 @@ const About = () => {
             {...headContentAnimation}
           >
             <CustomButton
-              type="filled"
-              title="Intro"
+              type="back"
+              title=" &nbsp;Intro"
               handleClick={() => ((state.intro = true), (state.about = false))}
-              customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg mr-2"
             />
             <CustomButton
-              type="filled"
+              type="next"
               title="Projects"
               handleClick={() => (
                 (state.about = false), (state.projects = true)
               )}
-              customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg ml-2"
             />
           </motion.div>
         </>

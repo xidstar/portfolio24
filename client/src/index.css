@@ -69,6 +69,26 @@ html {
   width: 100%;
 }
 
+.custom-btn:hover .svg-wrapper {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.hover-text {
+  transform: translateX(-100%);
+  transition: all .2s ease-in;
+  opacity: 0;
+}
+
+.custom-btn:hover .hover-text {
+  margin-bottom: 0;
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .color-text {
   font-family: 'Permanent Marker', cursive;
   background-image: -webkit-linear-gradient(92deg, #000000, transparent);

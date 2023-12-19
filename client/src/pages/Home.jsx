@@ -51,8 +51,8 @@ const Home = () => {
             </motion.div>
 
             <CustomButton
-              type="filled"
-              title="Scout"
+              type="next"
+              title="Scout &nbsp;"
               handleClick={() => ((state.intro = false), (state.about = true))}
               customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg"
             />
