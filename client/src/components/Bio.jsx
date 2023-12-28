@@ -5,7 +5,7 @@ import Underline from './Underline';
 const Bio = () => {
   return (
     <div className="tabcontent-container xl:p-5 h-full relative text-gray-800">
-      <h4 className="font-bold italic text-xl xl:text-3xl pb-5 xl:pb-10 color-text">
+      <h4 className="font-bold italic text-xl xl:text-2xl pb-5 xl:pb-10 [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
         "Passionately Curious..."
       </h4>
       <p className="text-xl xl:text-2xl text-left [text-shadow:_1px_1px_0_rgb(0_0_0_/_40%)]">
@@ -21,19 +21,18 @@ const Bio = () => {
       </p>
 
       <div className="py-2 xl:py-10 xl:mt-[4rem]">
-        <div className="img-wrapper gap-5 flex flex-row">
-          <div className="flex flex-col items-center">
+        <div className="img-wrapper gap-5 flex flex-col">
+          <div className="flex items-center">
             <img src={file} alt="figma" className="w-14 h-auto" />
             <a
               href={resume}
               target="_blank"
-              className="underline color-text xl:text-2xl"
+              className="color-text xl:text-2xl hover:underline"
             >
-              My resume
-              <Underline />
+              Resume
             </a>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex items-center">
             <img src={pin} alt="blender" className="w-14 h-auto" />
             <p className="color-text xl:text-2xl">Maryland, US</p>
           </div>

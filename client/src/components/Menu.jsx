@@ -36,7 +36,7 @@ const Menu = () => {
         )}
       </button>
       <motion.div
-        className={`absolute w-full xl:w-96 h-full top-0 z-20 bg-white transition-all ease-in-out duration-500 flex justify-center items-center shadow-3xl ${
+        className={`absolute opacity-[0.4] w-full xl:w-96 h-full top-0 z-20 bg-white transition-all ease-in-out duration-500 flex justify-center items-center shadow-3xl ${
           snap.isMenuOpen ? "right-0" : "-right-[100%]"
         }`}
       >
