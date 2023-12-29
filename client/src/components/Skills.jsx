@@ -60,7 +60,7 @@ const Skills = () => {
             <img src={figma} alt="figma" className="w-20 h-auto" />
             <img src={blender} alt="blender" className="w-20 h-auto" />
           </div>
-          <div className="design flex gap-2 font-bold">
+          <div className="design flex flex-wrap gap-2 font-bold xl:w-[70%]">
             <p>Figma &#x2022;</p>
 
             <p>Blender &#x2022;</p>

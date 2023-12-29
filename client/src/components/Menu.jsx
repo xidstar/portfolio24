@@ -40,7 +40,7 @@ const Menu = () => {
           snap.isMenuOpen ? "right-0" : "-right-[100%]"
         }`}
       >
-        <div className="flex gap-10 flex-col text-3xl">
+        <div className="menu-wrapper flex gap-10 flex-col text-3xl">
           <MenuButton
             label="Intro"
             onClick={() => (
@@ -87,10 +87,13 @@ const MenuButton = (props) => {
   const {label, onClick} = props
 
   return (
-    <button onClick={onClick} className="text-left font-bold">
+    <button
+      onClick={onClick}
+      className="menu-btn text-left font-bold transition transform hover:-translate-y-1 hover:scale-110 duration-300 opacity-100"
+    >
       {label}
     </button>
-  )
+  );
 }
 
 export default Menu

@@ -64,7 +64,7 @@ export const skillset = [
   },
   {
     name: "Nextjs",
-    level: 60,
+    level: 70,
   },
   {
     name: "Nodejs",

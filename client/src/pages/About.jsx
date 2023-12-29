@@ -41,10 +41,6 @@ const About = () => {
               {...headTextAnimation}
             >
               <div className="tab-title-wrapper flex flex-col items-center justify-center pb-10">
-                {/* <h3 className="text-4xl font-bold py-2 text-gray-800">
-                  About Me
-                </h3> */}
-                {/* <Underline /> */}
               </div>
 
               <div className="btn-wrapper flex justify-start gap-10 w-full">
@@ -57,7 +53,7 @@ const About = () => {
                       customStyles={`${
                         isActiveTab === tab.title
                           ? "bg-purple-700 scale-105 h-[130px] hover:scale-110 text-white"
-                          : "bg-gray-200"
+                          : "bg-slate-300"
                       }`}
                     />
                   </motion.div>

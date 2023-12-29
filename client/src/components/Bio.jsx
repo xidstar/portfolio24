@@ -1,6 +1,6 @@
 import React from 'react';
 import { file, pin, resume } from '../assets';
-import Underline from './Underline';
+import Circle from './Circle';
 
 const Bio = () => {
   return (
@@ -22,12 +22,13 @@ const Bio = () => {
 
       <div className="py-2 xl:py-10 xl:mt-[4rem]">
         <div className="img-wrapper gap-5 flex flex-col">
-          <div className="flex items-center">
-            <img src={file} alt="figma" className="w-14 h-auto" />
+          <div className="flex items-center relative h-[5rem]">
+            <Circle />
+            <img src={file} alt="figma" className="relative w-14 h-auto" />
             <a
               href={resume}
               target="_blank"
-              className="color-text xl:text-2xl hover:underline"
+              className="relative color-text xl:text-2xl hover:underline hover:scale-110 transition ease-in-out"
             >
               Resume
             </a>

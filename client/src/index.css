@@ -56,6 +56,15 @@ html {
   fill-rule: evenodd;
 }
 
+.dash {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3.8054;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
 .color-text-wrapper {
   display: inline-flex;
 }
