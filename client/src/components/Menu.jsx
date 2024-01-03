@@ -36,7 +36,7 @@ const Menu = () => {
         )}
       </button>
       <motion.div
-        className={`absolute opacity-[0.4] w-full xl:w-96 h-full top-0 z-20 bg-white transition-all ease-in-out duration-500 flex justify-center items-center shadow-3xl ${
+        className={`absolute opacity-[0.7] w-full xl:w-96 h-full top-0 z-20 bg-slate-200 duration-500 flex justify-center items-center shadow-3xl ${
           snap.isMenuOpen ? "right-0" : "-right-[100%]"
         }`}
       >
@@ -51,20 +51,20 @@ const Menu = () => {
             )}
           />
           <MenuButton
-            label="Bio"
-            onClick={() => (
-              (state.intro = false),
-              (state.about = true),
-              (state.projects = false),
-              (state.contact = false)
-            )}
-          />
-          <MenuButton
             label="Projects"
             onClick={() => (
               (state.intro = false),
               (state.about = false),
               (state.projects = true),
+              (state.contact = false)
+            )}
+          />
+          <MenuButton
+            label="Bio"
+            onClick={() => (
+              (state.intro = false),
+              (state.about = true),
+              (state.projects = false),
               (state.contact = false)
             )}
           />

@@ -66,14 +66,14 @@ const Contact = () => {
               type="back"
               title=" Projects"
               handleClick={() => (
-                (state.projects = true), (state.contact = false)
+                (state.contact = false), (state.about = true)
               )}
             />
             <CustomButton
               type="next"
               title="Intro"
               handleClick={() => (
-                (state.intro = true), (state.contact = false)
+                (state.contact = false), (state.intro = true)
               )}
             />
           </motion.div>

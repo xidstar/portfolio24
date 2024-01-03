@@ -39,16 +39,16 @@ const Projects = () => {
           >
             <CustomButton
               type="back"
-              title="Bio"
+              title="Intro"
               handleClick={() => (
-                (state.about = true), (state.projects = false)
+                (state.projects = false), (state.intro = true)
               )}
             />
             <CustomButton
               type="next"
-              title="Contact"
+              title="About"
               handleClick={() => (
-                (state.projects = false), (state.contact = true)
+                (state.projects = false), (state.about = true)
               )}
             />
           </motion.div>

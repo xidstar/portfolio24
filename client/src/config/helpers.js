@@ -28,7 +28,7 @@ export const bgText = () => {
   const snap = useSnapshot(state);
   
   if(snap.isMenuOpen) {
-      return "Menu.";
+      return "";
   } 
   if(snap.intro) {
       return "Intro.";

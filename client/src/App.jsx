@@ -1,16 +1,18 @@
 import React from 'react'
+import { Suspense } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 import { framerMotionConfig } from './config/constants';
 import Cursor from './components/Cursor';
 
-import { OrbitControls, Scroll, ScrollControls, Text } from "@react-three/drei";
+import { Loader, OrbitControls, Scroll, ScrollControls, Text } from "@react-three/drei";
 import Home from "./pages/Home";
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Navbar from "./components/Navbar";
 import Contact from './pages/Contact';
 import { BgColor, getContrastingColor, bgText } from "./config/helpers";
+import LoadingScreen from './pages/LoadingScreen';
 
 import { useSnapshot } from "valtio";
 import state from "./store";
@@ -36,8 +38,10 @@ function App(props) {
         >
           {/* <OrbitControls /> */}
           <color attach="background" args={[BgColor()]} />
-          <Experience />
-          
+          <Suspense fallback={null}>
+            <Experience />
+          </Suspense>
+
           <ScrollControls
             // pages={3}
             damping={0.1}
@@ -62,6 +66,8 @@ function App(props) {
           </Text>
         </Canvas>
         <Cursor />
+        {/* <Loader /> */}
+        <LoadingScreen />
       </MotionConfig>
     </main>
   );

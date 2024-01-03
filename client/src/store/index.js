@@ -1,7 +1,8 @@
 import { proxy } from "valtio";
 
 const state = proxy({
-  intro: true,
+  loading: true,
+  intro: false,
   about: false,
   projects: false,
   contact: false,

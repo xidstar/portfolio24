@@ -48,6 +48,22 @@ html {
   display: none !important;
 }
 
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ccc;
+  background-image: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 8s;
+  z-index: 10;
+}
+
 .cls-1 {
   fill: none;
   stroke: #000;
@@ -63,6 +79,10 @@ html {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
+}
+
+.menu-wrapper button:hover {
+  color: rgb(233, 27, 27);
 }
 
 .color-text-wrapper {
