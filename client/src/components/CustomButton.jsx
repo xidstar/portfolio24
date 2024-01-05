@@ -11,7 +11,7 @@ const CustomButton = ({title, type, handleClick}) => {
     <button
       className={`custom-btn relative flex items-center justify-center w-[10rem] h-[3.5rem] bg-[${
         snap.color
-      }] border-4 hover:border-none text-xl font-semibold hover:font-normal capitalize py-1.5 rounded-full mx-2 overflow-hidden ${
+      }] border-2 hover:border-none text-xl font-semibold hover:font-normal capitalize py-1.5 rounded-full mx-2 overflow-hidden ${
         snap.projects || snap.contact
           ? "text-slate-300 border-slate-400"
           : "text-slate-700 border-slate-700"

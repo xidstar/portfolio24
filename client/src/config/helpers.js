@@ -59,6 +59,25 @@ export const BgColor = () => {
   return color
 }
 
+export const generateStyle = () => {
+  const snap = useSnapshot(state);
+  if (snap.loading) {
+    return 'radial-gradient(at 20% top, #bccafe 11%, #cdb9e3 51%, #ccabfd 100%)';
+  } 
+  else if (snap.intro) {
+    return 'radial-gradient(at 20% top, #c0f8ff 11%, #b6d0ff 51%, #d6d3ff 100%)';
+  } 
+  else if (snap.projects) {
+    return 'radial-gradient(at 20% top, rgba(188,202,254,1) 11%, rgba(205,185,227,1) 51%, rgba(204,171,253,1) 100%)';
+  } 
+  else if (snap.about) {
+    return 'radial-gradient(at 20% top, rgba(188,202,254,1) 11%, rgba(205,185,227,1) 51%, rgba(204,171,253,1) 100%)';
+  } 
+  else if (snap.contact) {
+    return 'radial-gradient(at 20% top, rgba(188,202,254,1) 11%, rgba(205,185,227,1) 51%, rgba(204,171,253,1) 100%)';
+  } 
+};
+
 
 export const getContrastingColor = (color) => {
   // Remove the '#' character if it exists

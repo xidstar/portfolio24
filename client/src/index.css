@@ -54,14 +54,18 @@ html {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #ccc;
-  background-image: inherit;
+  /* background-color: #ccc;
+  background-image: inherit; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: opacity 8s;
   z-index: 10;
+}
+
+.loading-text {
+  font-size: 10rem;
 }
 
 .cls-1 {

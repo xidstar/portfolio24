@@ -34,7 +34,9 @@ function App(props) {
         <Canvas
           shadows
           camera={{ position: [0, 1, 5], fov: 30 }}
-          style={{ position: "absolute" }}
+          style={{
+            position: "absolute",
+          }}
         >
           {/* <OrbitControls /> */}
           <color attach="background" args={[BgColor()]} />
