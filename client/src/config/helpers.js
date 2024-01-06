@@ -28,7 +28,7 @@ export const bgText = () => {
   const snap = useSnapshot(state);
   
   if(snap.isMenuOpen) {
-      return "Menu.";
+      return "";
   } 
   if(snap.intro) {
       return "Intro.";
@@ -58,6 +58,27 @@ export const BgColor = () => {
 
   return color
 }
+
+export const generateStyle = () => {
+  const snap = useSnapshot(state);
+  if (snap.loading) {
+    return 'radial-gradient(at 20% top, #bccafe 11%, #cdb9e3 51%, #ccabfd 100%)';
+  } 
+  else if (snap.intro) {
+    // return 'linear-gradient(135deg, #f5dab3 0%, #854a80 100%)';
+    return 'linear-gradient(135deg, #d6d3ff 0%, #f5dab3 60%)';
+  } 
+  else if (snap.projects) {
+    return 'linear-gradient(135deg, #f5dab3 11%, #854a80 100%)';
+  } 
+  else if (snap.about) {
+    return 'linear-gradient(135deg, #854a80 11%, #d6d3ff 100%)';
+    // return 'radial-gradient(at 20% top, #c0f8ff 11%, #b6d0ff 51%, #d6d3ff 100%)';
+  } 
+  else if (snap.contact) {
+    return 'linear-gradient(135deg, #60358f 0%, #d6d3ff 100%)';
+  } 
+};
 
 
 export const getContrastingColor = (color) => {

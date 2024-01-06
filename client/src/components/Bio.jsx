@@ -1,11 +1,11 @@
 import React from 'react';
-import { file, pin, resume } from '../assets';
+import { pin } from '../assets';
 import Underline from './Underline';
 
 const Bio = () => {
   return (
-    <div className="tabcontent-container xl:p-5 h-full relative text-gray-800">
-      <h4 className="font-bold italic text-xl xl:text-3xl text-center pb-5 xl:pb-10 color-text">
+    <div className="tabcontent-container xl:p-5 h-full relative text-gray-800 font-bold">
+      <h4 className="font-bold italic text-xl xl:text-2xl pb-5 xl:pb-10">
         "Passionately Curious..."
       </h4>
       <p className="text-xl xl:text-2xl text-left">
@@ -16,27 +16,18 @@ const Bio = () => {
       <br />
       <p className="text-xl xl:text-2xl text-left">
         I'm passionate about translating ideas and brand values into
-        eye-catching, user-centered digital solutions.
+        eye-catching, user-centered digital solutions. I'm a strong advocate for
+        great design, in all its forms.
       </p>
 
-      <div className="py-2 xl:py-10 xl:mt-[4rem]">
-        <div className="img-wrapper gap-5 flex flex-row">
-          <div className="flex items-center">
-            <img src={file} alt="figma" className="w-14 h-auto" />
-            <a
-              href={resume}
-              target="_blank"
-              className="underline color-text xl:text-2xl"
-            >
-              My resume
-              <Underline />
-            </a>
-          </div>
+      <div className="py-2 xl:mt-[2rem]">
+        <div className="img-wrapper gap-5 flex flex-col">
           <div className="flex items-center">
             <img src={pin} alt="blender" className="w-14 h-auto" />
-            <p className="color-text xl:text-2xl">
-              Maryland, US
-            </p>
+            <div>
+              <p className="color-text xl:text-2xl pb-2">Maryland, US</p>
+              <Underline />
+            </div>
           </div>
         </div>
       </div>

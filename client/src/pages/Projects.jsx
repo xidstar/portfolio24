@@ -26,7 +26,7 @@ const Projects = () => {
         <>
           <motion.section className="flex justify-start items-center h-screen w-full p-4 max-w-screen-2xl mx-auto ">
             <motion.div
-              className="tabs flex flex-col w-full h-[70%] xl:w-2/3 xl:h-2/3 glassmorphism rounded-lg relative"
+              className="tabs flex flex-col w-full h-[70%] xl:w-2/3 xl:h-2/3  drop-shadow-2xl rounded-lg relative"
               {...headTextAnimation}
             >
               <Carousel />
@@ -38,20 +38,18 @@ const Projects = () => {
             {...headContentAnimation}
           >
             <CustomButton
-              type="filled"
-              title="Bio"
+              type="back"
+              title="Intro"
               handleClick={() => (
-                (state.about = true), (state.projects = false)
+                (state.projects = false), (state.intro = true)
               )}
-              customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg mr-2"
             />
             <CustomButton
-              type="filled"
-              title="Contact"
+              type="next"
+              title="About"
               handleClick={() => (
-                (state.projects = false), (state.contact = true)
+                (state.projects = false), (state.about = true)
               )}
-              customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg ml-2"
             />
           </motion.div>
         </>

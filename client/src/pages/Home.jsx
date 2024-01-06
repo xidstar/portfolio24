@@ -30,7 +30,7 @@ const Home = () => {
             <motion.div {...headTextAnimation}>
               <h1 className="head-text">
                 Hi, I'm
-                <span className='color-text-wrapper relative'>
+                <span className='color-text-wrapper relative pl-5'>
                   <span className="color-text">Sid!</span>
                   <Underline />
                 </span>
@@ -51,9 +51,9 @@ const Home = () => {
             </motion.div>
 
             <CustomButton
-              type="filled"
-              title="Scout"
-              handleClick={() => ((state.intro = false), (state.about = true))}
+              type="next"
+              title="Projects"
+              handleClick={() => ((state.intro = false), (state.projects = true))}
               customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg"
             />
           </motion.div>

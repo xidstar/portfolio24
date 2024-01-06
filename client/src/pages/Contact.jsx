@@ -1,6 +1,10 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSnapshot } from "valtio";
+import {contactText} from "../assets"
+import { TbMailShare } from "react-icons/tb";
+
+
 
 import state from "../store";
 
@@ -13,7 +17,6 @@ import {
 } from "../config/motion";
 
 import { CustomButton } from "../components";
-import { getContrastingColor } from "../config/helpers";
 
 const Contact = () => {
   const snap = useSnapshot(state);
@@ -30,7 +33,29 @@ const Contact = () => {
             {...headContainerAnimation}
           >
             <motion.div {...headTextAnimation}>
-              <h3>Contact</h3>
+              <span className="text-xl xl:text-2xl">
+                Ready for your next project?
+              </span>
+              <h3 className="text-3xl xl:text-[150px] font-bold tracking-tight py-10">
+                <br />
+                Let's Talk!
+              </h3>
+            </motion.div>
+            <motion.div
+              className="flex justify-center items-center relative w-[10rem] h-[10rem]"
+              {...headContentAnimation}
+            >
+              <img
+                src={contactText}
+                alt="contact"
+                className="contact-spin absolute z-1"
+              />
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=sidneyo254@gmail.com"
+                target="_blank"
+              >
+                <TbMailShare className="text-[5rem] cursor-pointer relative z-3 fill-[#ccc] hover:scale-110 hover:fill-[#cd455b] transition-all ease-in-out" />
+              </a>
             </motion.div>
           </motion.div>
           <motion.div
@@ -38,20 +63,18 @@ const Contact = () => {
             {...headContentAnimation}
           >
             <CustomButton
-              type="filled"
-              title="Projects"
+              type="back"
+              title=" Projects"
               handleClick={() => (
-                (state.projects = true), (state.contact = false)
+                (state.contact = false), (state.about = true)
               )}
-              customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg mr-2"
             />
             <CustomButton
-              type="filled"
+              type="next"
               title="Intro"
               handleClick={() => (
-                (state.intro = true), (state.contact = false)
+                (state.contact = false), (state.intro = true)
               )}
-              customStyles="w-fit min-w-[150px] px-5 py-2.5 font-bold text-lg ml-2"
             />
           </motion.div>
         </motion.section>

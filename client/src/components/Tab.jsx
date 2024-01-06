@@ -8,7 +8,7 @@ const Tab = ({ tab, handleClick, customStyles }) => {
   return (
     <div
       key={tab.title}
-      className={`w-[120px] xl:w-[200px] h-[50px] text-xl hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg hover:shadow-2xl p-3 overflow-hidden rounded-lg ${customStyles}`}
+      className={`w-[120px] xl:w-[200px] h-[50px] text-xl hover:cursor-pointer hover:scale-105 transition ease-in-out shadow-lg hover:shadow-2xl p-3 overflow-hidden rounded-3xl ${customStyles}`}
       onClick={handleClick}
     >
       <h3 className="uppercase text-center">{tab.title}</h3>

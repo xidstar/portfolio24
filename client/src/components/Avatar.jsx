@@ -47,6 +47,18 @@ export function Avatar(props) {
     group
   );
 
+  const XPosition = () => {
+    // if(snap.intro) {
+    //   return 0
+    // }
+    if (snap.about || snap.intro) {
+      return 0.5
+    }
+    else if (snap.projects || snap.contact) {
+      return 1.2;
+    }
+  }
+
   useFrame((state) => {
     if(cursorFollow) {
       const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
@@ -81,10 +93,10 @@ export function Avatar(props) {
 
   return (
     <group {...props} ref={group} dispose={null}>
-      <motion.group 
+      <motion.group
         rotation-x={-Math.PI / 2}
         animate={{
-          x: snap.contact || snap.projects || snap.about ? 1.2 : 0,
+          x: XPosition(),
         }}
       >
         <primitive object={nodes.Hips} />

@@ -22,25 +22,17 @@ const Menu = () => {
         className={`text-[2.5rem] z-30 top-7 right-10 absolute`}
       >
         {snap.isMenuOpen ? (
-          <VscChromeClose
-            className={`${
-              snap.intro || snap.about ? "stroke-black" : "stroke-slate-300"
-            }`}
-          />
+          <VscChromeClose className="stroke-black" />
         ) : (
-          <FiMenu
-            className={`${
-              snap.intro || snap.about ? "stroke-black" : "stroke-slate-300"
-            }`}
-          />
+          <FiMenu className="stroke-black" />
         )}
       </button>
       <motion.div
-        className={`absolute w-full xl:w-96 h-full top-0 z-20 bg-white transition-all ease-in-out duration-500 flex justify-center items-center shadow-3xl ${
+        className={`absolute border-2 border-slate-300 w-full xl:w-96 h-full top-0 z-20 bg-slate-200 duration-500 flex justify-center items-center shadow-3xl ${
           snap.isMenuOpen ? "right-0" : "-right-[100%]"
         }`}
       >
-        <div className="flex gap-10 flex-col text-3xl">
+        <div className="menu-wrapper flex gap-10 flex-col text-3xl">
           <MenuButton
             label="Intro"
             onClick={() => (
@@ -51,20 +43,20 @@ const Menu = () => {
             )}
           />
           <MenuButton
-            label="Bio"
-            onClick={() => (
-              (state.intro = false),
-              (state.about = true),
-              (state.projects = false),
-              (state.contact = false)
-            )}
-          />
-          <MenuButton
             label="Projects"
             onClick={() => (
               (state.intro = false),
               (state.about = false),
               (state.projects = true),
+              (state.contact = false)
+            )}
+          />
+          <MenuButton
+            label="Bio"
+            onClick={() => (
+              (state.intro = false),
+              (state.about = true),
+              (state.projects = false),
               (state.contact = false)
             )}
           />
@@ -87,10 +79,13 @@ const MenuButton = (props) => {
   const {label, onClick} = props
 
   return (
-    <button onClick={onClick} className="text-left font-bold">
+    <button
+      onClick={onClick}
+      className="menu-btn text-left font-bold transition transform hover:-translate-y-1 hover:scale-110 duration-300 opacity-100"
+    >
       {label}
     </button>
-  )
+  );
 }
 
 export default Menu
