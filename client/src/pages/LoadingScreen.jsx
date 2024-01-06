@@ -42,7 +42,7 @@ const LoadingScreen = ({ onStarted }) => {
       {snap.loading && (
         <>
           <div
-            className={`loadingScreen bg-gradient-to-br from-purple-500 to-pink-500 : ""}`}
+            className={`loadingScreen bg-gradient-to-br from-slate-300 to-violet-500 : ""}`}
           >
             {isLoading ? (
               <div className="flex text-3xl xl:text-[8rem] text-slate-800">

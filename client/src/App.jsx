@@ -4,14 +4,16 @@ import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 import { framerMotionConfig } from './config/constants';
 import Cursor from './components/Cursor';
+import { easing } from "maath";
 
 import { Loader, OrbitControls, Scroll, ScrollControls, Text } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
 import Home from "./pages/Home";
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Navbar from "./components/Navbar";
 import Contact from './pages/Contact';
-import { BgColor, getContrastingColor, bgText } from "./config/helpers";
+import { BgColor, generateStyle, bgText } from "./config/helpers";
 import LoadingScreen from './pages/LoadingScreen';
 
 import { useSnapshot } from "valtio";
@@ -21,8 +23,9 @@ import { MotionConfig } from 'framer-motion';
 function App(props) {
   const snap = useSnapshot(state);
   
+  generateStyle();
 
-  BgColor();
+  
 
   return (
     <main className={`app transition-all ease-in relative`}>
@@ -34,12 +37,15 @@ function App(props) {
         <Canvas
           shadows
           camera={{ position: [0, 1, 5], fov: 30 }}
+          className="absolute"
           style={{
-            position: "absolute",
+            background: generateStyle(),
           }}
         >
+          
           {/* <OrbitControls /> */}
-          <color attach="background" args={[BgColor()]} />
+          {/* <color attach="background" args={[BgColor()]} /> */}
+          {/* {snap.intro ? <fog attach="fog" args={["#cccccc", 3, 20]} /> : ""} */}
           <Suspense fallback={null}>
             <Experience />
           </Suspense>
@@ -57,15 +63,7 @@ function App(props) {
               <Contact />
             </Scroll>
           </ScrollControls>
-          <Text
-            position={[2, 0.8, -7]}
-            rotation={[0, 0, 0]}
-            scale={1.5}
-            color={snap.intro || snap.about ? 0x403e3e : 0xcccccc}
-            // anchorX="center"
-          >
-            {bgText()}
-          </Text>
+          
         </Canvas>
         <Cursor />
         {/* <Loader /> */}

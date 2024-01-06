@@ -16,7 +16,7 @@ const Skills = () => {
             {skillset.map((skill, index) => (
               <div className="w-full xl:w-2/3" key={index}>
                 <motion.h3
-                  className="text-xl font-bold text-gray-800"
+                  className="text-xl font-bold text-slate-800"
                   initial={{
                     opacity: 0,
                   }}
@@ -32,9 +32,9 @@ const Skills = () => {
                 >
                   {skill.name}
                 </motion.h3>
-                <div className="h-2 w-full bg-gray-200 rounded-full mt-2">
+                <div className="h-3 w-full bg-slate-200 rounded-full mt-2">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full "
+                    className="h-full bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full border-2 border-slate-200"
                     style={{ width: `${skill.level}%` }}
                     initial={{
                       scaleX: 0,

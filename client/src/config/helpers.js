@@ -65,16 +65,18 @@ export const generateStyle = () => {
     return 'radial-gradient(at 20% top, #bccafe 11%, #cdb9e3 51%, #ccabfd 100%)';
   } 
   else if (snap.intro) {
-    return 'radial-gradient(at 20% top, #c0f8ff 11%, #b6d0ff 51%, #d6d3ff 100%)';
+    // return 'linear-gradient(135deg, #f5dab3 0%, #854a80 100%)';
+    return 'linear-gradient(135deg, #d6d3ff 0%, #f5dab3 60%)';
   } 
   else if (snap.projects) {
-    return 'radial-gradient(at 20% top, rgba(188,202,254,1) 11%, rgba(205,185,227,1) 51%, rgba(204,171,253,1) 100%)';
+    return 'linear-gradient(135deg, #f5dab3 11%, #854a80 100%)';
   } 
   else if (snap.about) {
-    return 'radial-gradient(at 20% top, rgba(188,202,254,1) 11%, rgba(205,185,227,1) 51%, rgba(204,171,253,1) 100%)';
+    return 'linear-gradient(135deg, #854a80 11%, #d6d3ff 100%)';
+    // return 'radial-gradient(at 20% top, #c0f8ff 11%, #b6d0ff 51%, #d6d3ff 100%)';
   } 
   else if (snap.contact) {
-    return 'radial-gradient(at 20% top, rgba(188,202,254,1) 11%, rgba(205,185,227,1) 51%, rgba(204,171,253,1) 100%)';
+    return 'linear-gradient(135deg, #60358f 0%, #d6d3ff 100%)';
   } 
 };
 

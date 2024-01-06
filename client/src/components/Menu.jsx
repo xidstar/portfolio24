@@ -22,21 +22,13 @@ const Menu = () => {
         className={`text-[2.5rem] z-30 top-7 right-10 absolute`}
       >
         {snap.isMenuOpen ? (
-          <VscChromeClose
-            className={`${
-              snap.intro || snap.about ? "stroke-black" : "stroke-slate-300"
-            }`}
-          />
+          <VscChromeClose className="stroke-black" />
         ) : (
-          <FiMenu
-            className={`${
-              snap.intro || snap.about ? "stroke-black" : "stroke-slate-300"
-            }`}
-          />
+          <FiMenu className="stroke-black" />
         )}
       </button>
       <motion.div
-        className={`absolute opacity-[0.7] w-full xl:w-96 h-full top-0 z-20 bg-slate-200 duration-500 flex justify-center items-center shadow-3xl ${
+        className={`absolute border-2 border-slate-300 w-full xl:w-96 h-full top-0 z-20 bg-slate-200 duration-500 flex justify-center items-center shadow-3xl ${
           snap.isMenuOpen ? "right-0" : "-right-[100%]"
         }`}
       >
