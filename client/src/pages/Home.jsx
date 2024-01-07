@@ -36,7 +36,7 @@ const Home = () => {
                 </span>
               </h1>
               <br />
-              <h3 className="font-bold text-3xl">
+              <h3 className="text-3xl">
                 I develop websites, user interfaces, web applications, and 2D &
                 3D visuals.
               </h3>

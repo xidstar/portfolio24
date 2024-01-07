@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { projects } from "../config/constants";
+import Underline from "./Underline";
 
 const Carousel = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -47,26 +48,27 @@ const Carousel = () => {
     <div className="relative h-full ">
       <button
         onClick={goToPreviousPage}
-        className="absolute left-0 top-0 bottom-0 text-slate-300 z-20"
+        className="absolute left-0 top-0 bottom-0 text-slate-200 z-20"
       >
         <SlArrowLeft className="text-4xl " />
       </button>
 
-      <div className="flex flex-col items-center h-full">
+      <div className="flex flex-col items-center h-full project-info">
         <div className="text mb-[50px] absolute bottom-20 right-0 xl:-mr-[10%] z-10">
-          <div className="flex flex-col justify-center text-slate-300">
+          <div className="flex flex-col justify-center text-slate-200 !relative">
             <h3 className="font-bold pb-5 text-xl xl:text-3xl">
               {projects[currentPage].title}
             </h3>
-            <p className="text-lg">
+            <p className="text-2xl text-icon">
               {projects[currentPage].description}
             </p>
             <a
               href={projects[currentPage].url}
               target="_blank"
-              className="pt-5 underline"
+              className="pt-8 text-xl z-20"
             >
               View Project
+              <Underline />
             </a>
           </div>
         </div>
@@ -87,7 +89,7 @@ const Carousel = () => {
 
       <button
         onClick={goToNextPage}
-        className="absolute right-0 top-0 bottom-0 text-slate-300 z-20"
+        className="absolute right-0 top-0 bottom-0 text-slate-200 z-20"
       >
         <SlArrowRight className="text-4xl" />
       </button>

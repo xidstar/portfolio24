@@ -4,6 +4,9 @@ import { FiMenu } from "react-icons/fi";
 import { VscChromeClose } from "react-icons/vsc";
 import { useSnapshot } from "valtio";
 import state from '../store';
+import { BsLinkedin } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { IoMdMail } from "react-icons/io";
 
 
 const Menu = () => {
@@ -70,6 +73,30 @@ const Menu = () => {
             )}
           />
         </div>
+
+        <div className="social flex justify-around items-center absolute bottom-5">
+          <a
+            href="https://www.linkedin.com/in/sidney-oluoch/"
+            target="_blank"
+            className="hover:cursor-pointer hover:text-[#d61a39]"
+          >
+            <BsLinkedin className="text-3xl m-5" />
+          </a>
+          <a
+            href="https://github.com/xidstar"
+            target="_blank"
+            className="hover:cursor-pointer hover:text-[#d61a39]"
+          >
+            <FaGithub className="text-4xl m-5" />
+          </a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sidneyo254@gmail.com"
+            target="_blank"
+            className="hover:cursor-pointer hover:text-[#d61a39]"
+          >
+            <IoMdMail className="text-4xl m-5" />
+          </a>
+        </div>
       </motion.div>
     </>
   );
@@ -81,7 +108,7 @@ const MenuButton = (props) => {
   return (
     <button
       onClick={onClick}
-      className="menu-btn text-left font-bold transition transform hover:-translate-y-1 hover:scale-110 duration-300 opacity-100"
+      className="menu-btn text-left font-bold transition duration-300"
     >
       {label}
     </button>

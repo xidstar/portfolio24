@@ -4,8 +4,8 @@ import Underline from './Underline';
 
 const Bio = () => {
   return (
-    <div className="tabcontent-container xl:p-5 h-full relative text-gray-800 font-bold">
-      <h4 className="font-bold italic text-xl xl:text-2xl pb-5 xl:pb-10">
+    <div className="tabcontent-container xl:p-5 h-full relative">
+      <h4 className="font-bold text-icon text-xl xl:text-3xl pb-5 xl:pb-10">
         "Passionately Curious..."
       </h4>
       <p className="text-xl xl:text-2xl text-left">
@@ -23,9 +23,15 @@ const Bio = () => {
       <div className="py-2 xl:mt-[2rem]">
         <div className="img-wrapper gap-5 flex flex-col">
           <div className="flex items-center">
-            <img src={pin} alt="blender" className="w-14 h-auto" />
+            <img
+              src={pin}
+              alt="blender"
+              className="w-14 h-auto"
+            />
             <div>
-              <p className="color-text xl:text-2xl pb-2">Maryland, US</p>
+              <p className="text-icon font-bold xl:text-3xl pb-2">
+                Maryland, US
+              </p>
               <Underline />
             </div>
           </div>

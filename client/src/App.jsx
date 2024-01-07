@@ -4,28 +4,21 @@ import { Canvas } from "@react-three/fiber";
 import { Experience } from "./components/Experience";
 import { framerMotionConfig } from './config/constants';
 import Cursor from './components/Cursor';
-import { easing } from "maath";
 
-import { Loader, OrbitControls, Scroll, ScrollControls, Text } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { Scroll, ScrollControls } from "@react-three/drei";
 import Home from "./pages/Home";
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Navbar from "./components/Navbar";
 import Contact from './pages/Contact';
-import { BgColor, generateStyle, bgText } from "./config/helpers";
+import Footer from './components/Footer';
+import { generateStyle } from "./config/helpers";
 import LoadingScreen from './pages/LoadingScreen';
-
-import { useSnapshot } from "valtio";
-import state from "./store";
 import { MotionConfig } from 'framer-motion';
 
-function App(props) {
-  const snap = useSnapshot(state);
+function App() {
   
   generateStyle();
-
-  
 
   return (
     <main className={`app transition-all ease-in relative`}>
@@ -42,10 +35,9 @@ function App(props) {
             background: generateStyle(),
           }}
         >
-          
           {/* <OrbitControls /> */}
           {/* <color attach="background" args={[BgColor()]} /> */}
-          {/* {snap.intro ? <fog attach="fog" args={["#cccccc", 3, 20]} /> : ""} */}
+          {/* <fog attach="fog" args={["#f5dab3", 3, 20]} /> */}
           <Suspense fallback={null}>
             <Experience />
           </Suspense>
@@ -61,12 +53,11 @@ function App(props) {
               <About />
               <Projects />
               <Contact />
+              <Footer />
             </Scroll>
           </ScrollControls>
-          
         </Canvas>
         <Cursor />
-        {/* <Loader /> */}
         <LoadingScreen />
       </MotionConfig>
     </main>

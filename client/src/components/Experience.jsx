@@ -27,7 +27,7 @@ export const Experience = () => {
 
     easing.dampE(
       group.current.rotation,
-      [state.pointer.y / 1000, state.pointer.x / 30, 0],
+      [state.pointer.y / 200, state.pointer.x / 30, 0],
       0.1,
       delta
     );
@@ -71,7 +71,7 @@ export const Experience = () => {
           rotation={[0, 0, 0]}
           scale={1.8}
           color={0x403e3e}
-          // color={snap.intro || snap.about ? 0x403e3e : 0xcccccc}
+          // color={snap.intro || snap.projects ? 0x403e3e : 0xcccccc}
           // anchorX="center"
         >
           {bgText()}

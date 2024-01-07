@@ -36,7 +36,7 @@ const Contact = () => {
               <span className="text-xl xl:text-2xl">
                 Ready for your next project?
               </span>
-              <h3 className="text-3xl xl:text-[150px] font-bold tracking-tight py-10">
+              <h3 className="text-3xl xl:text-[150px] font-bold text-slate-900 tracking-tight py-10">
                 <br />
                 Let's Talk!
               </h3>

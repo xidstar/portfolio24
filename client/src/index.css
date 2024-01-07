@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Permanent+Marker&family=Poppins:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -68,6 +68,31 @@ html {
   font-size: 10rem;
 }
 
+.text-icon {
+  font-family: 'Caveat', cursive;
+}
+
+.project-info svg .cls-1 {
+  stroke: #cbd5e1;
+}
+
+.project-info a:hover .cls-1 {
+  stroke: #d61a39;
+  transition: all .3s ease-in-out;
+}
+
+.resume-wrapper #Circle {
+  z-index: -1;
+}
+
+.resume-wrapper .flex:hover #Circle .dash, .resume-wrapper a:hover .dash {
+  fill: #cbd5e1;
+}
+
+.resume-wrapper .flex:hover a, .resume-wrapper a:hover {
+  color: #d61a39;
+}
+
 .cls-1 {
   fill: none;
   stroke: #000;
@@ -86,7 +111,11 @@ html {
 }
 
 .menu-wrapper button:hover {
-  color: rgb(233, 27, 27);
+  transition: all .2s ease-in-out;
+  color: #d61a39;
+  font-family: 'Caveat', cursive;
+  font-style: bold;
+  font-size: 2.5rem;
 }
 
 .color-text-wrapper {
@@ -131,6 +160,10 @@ html {
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 10s infinite linear;
   padding: 10px 20px;
+}
+
+.text-footer {
+  font-family: 'Caveat', cursive;
 }
 
 .contact-spin {
