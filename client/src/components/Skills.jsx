@@ -3,7 +3,7 @@ import { skillset } from '../config/constants';
 import { file, resume } from '../assets';
 import { motion } from "framer-motion";
 
-import Circle from "./Circle";
+import Underline from './Underline';
 
 const Skills = () => {
   return (
@@ -70,15 +70,17 @@ const Skills = () => {
 
           <div className="resume-wrapper flex gap-5 xl:mt-[2rem]">
             <div className="flex items-center relative h-[5rem]">
-              <Circle />
               <img src={file} alt="figma" className="relative w-14 h-auto" />
-              <a
-                href={resume}
-                target="_blank"
-                className="resume relative text-icon font-bold xl:text-3xl z-10 hover:scale-110 transition ease-in-out"
-              >
-                Resume
-              </a>
+              <div className="link-wrapper flex flex-col">
+                <a
+                  href={resume}
+                  target="_blank"
+                  className="resume relative text-icon font-bold xl:text-3xl z-10 hover:scale-110 transition ease-in-out"
+                >
+                  Resume
+                </a>
+                <Underline />
+              </div>
             </div>
           </div>
         </div>

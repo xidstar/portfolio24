@@ -76,20 +76,12 @@ html {
   stroke: #cbd5e1;
 }
 
-.project-info a:hover .cls-1 {
+.link-wrapper:hover .cls-1 {
   stroke: #d61a39;
   transition: all .3s ease-in-out;
 }
 
-.resume-wrapper #Circle {
-  z-index: -1;
-}
-
-.resume-wrapper .flex:hover #Circle .dash, .resume-wrapper a:hover .dash {
-  fill: #cbd5e1;
-}
-
-.resume-wrapper .flex:hover a, .resume-wrapper a:hover {
+.link-wrapper:hover > a {
   color: #d61a39;
 }
 

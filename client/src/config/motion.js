@@ -4,7 +4,7 @@ export const slideAnimation = (direction) => {
   return {
     initial: {
       x: direction === "left" ? -300 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      y: direction === "up" ? 100 : direction === "down" ? -300 : 0,
       opacity: 0,
       transition: { ...transition, delay: 0.5 },
     },
@@ -12,11 +12,11 @@ export const slideAnimation = (direction) => {
       x: 0,
       y: 0,
       opacity: 1,
-      transition: { ...transition, delay: 0 },
+      transition: { ...transition, delay: 0.5 },
     },
     exit: {
-      x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
-      y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+      x: direction === "left" ? -100 : direction === "right" ? 600 : 0,
+      y: direction === "up" ? 100 : direction === "down" ? -300 : 0,
       transition: { ...transition, delay: 0 },
     },
   };
@@ -39,6 +39,31 @@ export const fadeAnimation = {
 
 export const headTextAnimation = {
   initial: { x: 100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+  transition: {
+    type: "spring",
+    damping: 5,
+    stiffness: 40,
+    restDelta: 0.001,
+    duration: 0.3,
+  },
+};
+
+export const headTextAnimationDelay = {
+  initial: { x: 100, opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+  transition: {
+    type: "spring",
+    damping: 5,
+    stiffness: 40,
+    restDelta: 0.001,
+    duration: 0.3,
+    delay: 0.1,
+  },
+};
+
+export const carouselTextAnimation = {
+  initial: { x: -200, opacity: 0 },
   animate: { x: 0, opacity: 1 },
   transition: {
     type: "spring",

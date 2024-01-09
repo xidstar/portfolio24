@@ -29,12 +29,14 @@ export function Avatar(props) {
   const {animations: saluteAnimation} = useFBX("animations/Salute.fbx");
   const { animations: briefcaseAnimation } = useFBX("animations/Briefcase Idle.fbx");
   const { animations: powAnimation } = useFBX("animations/Hands Forward Gesture.fbx");
+  const { animations: happyAnimation } = useFBX("animations/Happy Idle.fbx");
   
   jumpAnimation[0].name = "Jump";
   wavingAnimation[0].name = "Waving";
   saluteAnimation[0].name = "Salute";
   briefcaseAnimation[0].name = "Briefcase";
   powAnimation[0].name = "Pow";
+  happyAnimation[0].name = "Happy";
 
   const { actions } = useAnimations(
     [
@@ -42,11 +44,14 @@ export function Avatar(props) {
       jumpAnimation[0],
       wavingAnimation[0],
       saluteAnimation[0],
-      powAnimation[0]
+      powAnimation[0],
+      happyAnimation[0],
     ],
     group
   );
 
+
+  //Position avatar on screen
   const XPosition = () => {
     // if(snap.intro) {
     //   return 0
@@ -54,11 +59,15 @@ export function Avatar(props) {
     if (snap.about || snap.intro) {
       return 0.5
     }
-    else if (snap.projects || snap.contact) {
+    else if (snap.projects) {
       return 1.2;
+    }
+    else if (snap.contact) {
+      return 0.8;
     }
   }
 
+  //Avatar to follow mouse movement
   useFrame((state) => {
     if(cursorFollow) {
       const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
@@ -67,13 +76,15 @@ export function Avatar(props) {
   })
 
   useEffect(() => {
-    if(snap.intro) {
+    //Set cursor follow
+    if (snap.intro || snap.contact) {
       cursorFollow = true;
     }
     if(snap.isMenuOpen) {
       cursorFollow = false;
     }
 
+    //Set number of animation loops
     if (animation === "Jump") {
       actions[animation].setLoop(THREE.LoopOnce).clampWhenFinished = true;
     } 

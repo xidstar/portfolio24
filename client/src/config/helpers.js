@@ -7,6 +7,7 @@ import state from "../store";
 export const avatarAnimation = () => {
   const snap = useSnapshot(state);
 
+
   if(snap.isMenuOpen) {
       return "Pow";
   } 
@@ -17,7 +18,7 @@ export const avatarAnimation = () => {
       return "Briefcase";
   }
   else if(snap.projects) {
-      return "Jump";
+      return "Happy";
   }
   else {
     return "Salute";
@@ -26,9 +27,9 @@ export const avatarAnimation = () => {
 
 export const bgText = () => {
   const snap = useSnapshot(state);
-  
+
   if(snap.isMenuOpen) {
-      return "";
+      return "?";
   } 
   if(snap.intro) {
       return "Intro.";

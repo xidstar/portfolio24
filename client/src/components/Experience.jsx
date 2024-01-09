@@ -67,10 +67,10 @@ export const Experience = () => {
         />
         <Avatar animation={avatarAnimation()} />
         <Text
-          position={[2, 1.8, -10]}
+          position={snap.isMenuOpen ? [2, 2.1, -1.8] : [1.5, 1.8, -5]}
           rotation={[0, 0, 0]}
-          scale={1.8}
-          color={0x403e3e}
+          scale={snap.isMenuOpen ? 0.5 : 1.2}
+          color={snap.isMenuOpen ? 0xeb4457 : 0x403e3e}
           // color={snap.intro || snap.projects ? 0x403e3e : 0xcccccc}
           // anchorX="center"
         >

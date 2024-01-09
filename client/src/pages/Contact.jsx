@@ -9,7 +9,7 @@ import { TbMailShare } from "react-icons/tb";
 import state from "../store";
 
 import {
-  fadeAnimation,
+  headTextAnimationDelay,
   headContainerAnimation,
   headContentAnimation,
   headTextAnimation,
@@ -32,15 +32,21 @@ const Contact = () => {
             className="page-content flex flex-col w-full"
             {...headContainerAnimation}
           >
-            <motion.div {...headTextAnimation}>
-              <span className="text-xl xl:text-2xl">
+            <div>
+              <motion.span
+                className="text-xl xl:text-2xl"
+                {...headTextAnimation}
+              >
                 Ready for your next project?
-              </span>
-              <h3 className="text-3xl xl:text-[150px] font-bold text-slate-900 tracking-tight py-10">
+              </motion.span>
+              <motion.h3
+                className="text-3xl xl:text-[150px] font-bold text-slate-900 tracking-tight py-10"
+                {...headTextAnimationDelay}
+              >
                 <br />
                 Let's Talk!
-              </h3>
-            </motion.div>
+              </motion.h3>
+            </div>
             <motion.div
               className="flex justify-center items-center relative w-[10rem] h-[10rem]"
               {...headContentAnimation}
