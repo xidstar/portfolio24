@@ -47,7 +47,7 @@ const LoadingScreen = ({ onStarted }) => {
             className={`loadingScreen bg-gradient-to-br from-slate-300 to-violet-500 : ""`}
           >
             {isLoading ? (
-              <div className="flex text-3xl xl:text-[8rem] text-slate-800">
+              <div className="flex text-[5rem] xl:text-[8rem] text-slate-800">
                 <motion.h1>{rounded}</motion.h1>
                 <motion.h1>%</motion.h1>
               </div>

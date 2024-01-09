@@ -22,7 +22,7 @@ const Projects = () => {
       {snap.projects && (
         <motion.div {...headTextAnimation}>
           <motion.section className="flex justify-start items-center h-screen w-full p-4 max-w-screen-2xl mx-auto ">
-            <motion.div className="tabs flex flex-col w-full h-[70%] xl:w-2/3 xl:h-2/3  drop-shadow-2xl rounded-lg relative">
+            <motion.div className="tabs flex flex-col w-full h-[70%] xl:w-3/5 xl:h-3/5  drop-shadow-2xl rounded-lg relative">
               <Carousel />
             </motion.div>
           </motion.section>
