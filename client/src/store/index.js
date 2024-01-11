@@ -9,7 +9,8 @@ const state = proxy({
   colors: ['#ffa441', '#bc8e96', '#8952bf', '#353934'],
   isLogo: false,
   isMenuOpen: false,
-  isHovered: false,
+  isVisible: false,
+  isMobile: window.innerWidth < 768
 });
 
 export default state;

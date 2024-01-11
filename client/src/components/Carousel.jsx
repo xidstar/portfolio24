@@ -3,12 +3,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { projects } from "../config/constants";
 import Underline from "./Underline";
+import { useSnapshot } from "valtio";
 
-import {
-  carouselTextAnimation,
-} from "../config/motion";
+import state from "../store";
+
+import { carouselTextAnimation } from "../config/motion";
 
 const Carousel = () => {
+  const snap = useSnapshot(state);
   const [currentPage, setCurrentPage] = useState(0);
 
   const goToPage = (pageIndex) => {
@@ -46,25 +48,22 @@ const Carousel = () => {
     return () => clearTimeout(timer);
   }, [currentPage]);
 
-
-
   return (
     <AnimatePresence>
       <div className="relative h-full ">
-        <button
-          onClick={goToPreviousPage}
-          className="absolute left-0 top-0 bottom-0 text-slate-200 z-20"
-        >
-          <SlArrowLeft className="text-4xl " />
-        </button>
-
         <div className="flex flex-col items-center h-full project-info">
           <motion.div
-            className="text mb-[50px] absolute bottom-20 right-0 xl:-mr-[10%] z-10"
+            className={`text mb-[50px] md:absolute bottom-20 md:right-0 md:-mr-[10%] z-10 ${
+              snap.isMobile ? "w-[90%]" : ""
+            }`}
             {...carouselTextAnimation}
           >
-            <div className="flex flex-col justify-center text-slate-200 !relative">
-              <h3 className="font-bold text-xl xl:text-3xl">
+            <div
+              className={`flex flex-col justify-center text-slate-200 !relative ${
+                snap.isMobile ? "text-slate-900 font-bold" : ""
+              }`}
+            >
+              <h3 className="font-bold text-xl md:text-3xl">
                 {projects[currentPage].title}
               </h3>
               <p className="text-2xl text-icon py-5">
@@ -74,7 +73,7 @@ const Carousel = () => {
                 <a
                   href={projects[currentPage].url}
                   target="_blank"
-                  className="relative xl:text-xl z-10 hover:scale-105 transition ease-in-out"
+                  className="relative md:text-xl z-10 hover:scale-105 transition ease-in-out"
                 >
                   View Project
                 </a>
@@ -82,7 +81,13 @@ const Carousel = () => {
               </div>
             </div>
           </motion.div>
-          <div className="flex w-full h-full overflow-hidden">
+          <div className="flex w-full h-full overflow-hidden relative">
+            <button
+              onClick={goToPreviousPage}
+              className="absolute left-0 top-0 bottom-0 text-slate-200 z-20"
+            >
+              <SlArrowLeft className="text-4xl " />
+            </button>
             {projects.map((project) => (
               <motion.img
                 className="w-full h-full object-cover opacity-90"
@@ -91,18 +96,17 @@ const Carousel = () => {
                 loading="lazy"
               />
             ))}
+            <button
+              onClick={goToNextPage}
+              className="absolute right-0 top-0 bottom-0 text-slate-200 z-20"
+            >
+              <SlArrowRight className="text-4xl" />
+            </button>
           </div>
           <div className="pagination flex justify-center absolute bottom-10 left-0 right-0">
             {renderPageSliders()}
           </div>
         </div>
-
-        <button
-          onClick={goToNextPage}
-          className="absolute right-0 top-0 bottom-0 text-slate-200 z-20"
-        >
-          <SlArrowRight className="text-4xl" />
-        </button>
       </div>
     </AnimatePresence>
   );

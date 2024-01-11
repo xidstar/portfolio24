@@ -4,31 +4,26 @@ import { useSnapshot } from "valtio";
 
 import state from "../store";
 
-import {
-  headContentAnimation,
-  headTextAnimation,
-} from "../config/motion";
+import { headContentAnimation, headTextAnimation } from "../config/motion";
 
 import { CustomButton } from "../components";
 import Carousel from "../components/Carousel";
 
 const Projects = () => {
   const snap = useSnapshot(state);
-  
-
 
   return (
     <AnimatePresence>
       {snap.projects && (
         <motion.div {...headTextAnimation}>
-          <motion.section className="flex justify-start items-center h-screen w-full p-4 max-w-screen-2xl mx-auto ">
-            <motion.div className="tabs flex flex-col w-full h-[70%] xl:w-3/5 xl:h-3/5  drop-shadow-2xl rounded-lg relative">
+          <motion.section className="flex justify-start items-center h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto ">
+            <motion.div className="tabs flex flex-col w-full h-[70%] md:w-3/5 md:h-3/5  drop-shadow-2xl rounded-lg relative">
               <Carousel />
             </motion.div>
           </motion.section>
 
           <motion.div
-            className="page-buttons absolute flex w-full justify-center bottom-10"
+            className="page-buttons absolute flex w-full justify-center bottom-14 md:bottom-10"
             {...headContentAnimation}
           >
             <CustomButton

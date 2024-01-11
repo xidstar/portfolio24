@@ -16,6 +16,8 @@ export const Experience = () => {
   const snap = useSnapshot(state);
   const group = useRef();
 
+  const avatarScalingFactor = Math.min(Math.max(window.innerWidth / 1300, 0.5), 1);
+
   const cameraPositionX = useMotionValue();
   const cameraLookAtX = useMotionValue();
 
@@ -23,8 +25,7 @@ export const Experience = () => {
     state.camera.position.x = cameraPositionX.get();
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
 
-    //set model rotation
-
+    //set model rotation on mouse move
     easing.dampE(
       group.current.rotation,
       [state.pointer.y / 200, state.pointer.x / 30, 0],
@@ -53,6 +54,7 @@ export const Experience = () => {
       <motion.group
         ref={group}
         position-y={-1}
+        scale={avatarScalingFactor}
         // animate={{
         //   x: snap.projects || snap.contact ? 0 : 1,
         // }}
@@ -65,12 +67,17 @@ export const Experience = () => {
           resolution={256}
           color="#000000"
         />
-        <Avatar animation={avatarAnimation()} />
+        <Avatar
+          animation={avatarAnimation()}
+          position-x={snap.isMobile ? -0.5 : ""}
+          position-y={snap.isMobile ? 1.8 : ""}
+        />
         <Text
-          position={snap.isMenuOpen ? [2, 2.1, -1.8] : [1.5, 1.8, -5]}
+          position={snap.isMenuOpen ? [2, 2.1, -1.8] : [1, 1.8, -5]}
           rotation={[0, 0, 0]}
           scale={snap.isMenuOpen ? 0.5 : 1.2}
           color={0x403e3e}
+          visible={snap.isMobile ? snap.isVisible : !snap.isVisible}
           // color={snap.intro || snap.projects ? 0x403e3e : 0xcccccc}
           // anchorX="center"
         >

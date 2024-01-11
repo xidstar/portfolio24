@@ -21,15 +21,15 @@ html {
 }
 
 .home {
-  @apply w-fit xl:h-full flex xl:justify-between justify-start items-start flex-col xl:py-8 xl:px-36 sm:p-8 p-6 max-xl:gap-7 absolute z-10;
+  @apply w-fit md:h-full flex md:justify-between justify-start items-start flex-col md:py-8 md:px-36 sm:p-8 p-6 max-md:gap-7 absolute z-10;
 }
 
 .page-content {
-  @apply relative h-full flex-1 xl:justify-center justify-center flex flex-col gap-10;
+  @apply relative h-full flex-1 md:justify-center justify-end flex flex-col gap-10;
 }
 
 .head-text {
-  @apply text-[4rem] xl:leading-[4.5rem] leading-[2rem] font-bold;
+  @apply text-[3rem] md:text-[4rem] md:leading-[4.5rem] leading-[2rem] font-bold;
 }
 
 .tab-btn {
@@ -42,7 +42,11 @@ html {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 10px;
+  border-radius: 20px;
+  overflow: hidden;
 }
+
 
 .leva-c-kWgxhW {
   display: none !important;
@@ -72,9 +76,12 @@ html {
   font-family: 'Caveat', cursive;
 }
 
+@media(min-width: 768px) {
 .project-info svg .cls-1 {
-  stroke: #cbd5e1;
+    stroke: #cbd5e1;
+  }
 }
+
 
 .link-wrapper:hover .cls-1 {
   stroke: #d61a39;

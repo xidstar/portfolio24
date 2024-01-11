@@ -1,10 +1,8 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSnapshot } from "valtio";
-import {contactText} from "../assets"
+import { contactText } from "../assets";
 import { TbMailShare } from "react-icons/tb";
-
-
 
 import state from "../store";
 
@@ -24,48 +22,48 @@ const Contact = () => {
   return (
     <AnimatePresence>
       {snap.contact && (
-        <motion.section
-          className="flex flex-col justify-center h-screen w-full p-4 max-w-screen-2xl mx-auto items-start"
-          {...slideAnimation("left")}
-        >
-          <motion.div
-            className="page-content flex flex-col w-full"
-            {...headContainerAnimation}
-          >
-            <div>
-              <motion.span
-                className="text-xl xl:text-2xl"
-                {...headTextAnimation}
-              >
-                Ready for your next project?
-              </motion.span>
-              <motion.h3
-                className="text-3xl xl:text-[150px] font-bold text-slate-900 tracking-tight py-10"
-                {...headTextAnimationDelay}
-              >
-                <br />
-                Let's Talk!
-              </motion.h3>
-            </div>
+        <>
+          <motion.section className="flex flex-col justify-center h-[80%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start">
             <motion.div
-              className="flex justify-center items-center relative w-[10rem] h-[10rem]"
-              {...headContentAnimation}
+              className={`page-content flex flex-col w-full h-1/2 md:w-2/3 md:h-2/3 p-3 md:p-10 `}
+              {...headTextAnimation}
             >
-              <img
-                src={contactText}
-                alt="contact"
-                className="contact-spin absolute z-1"
-              />
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=sidneyo254@gmail.com"
-                target="_blank"
+              <div className={`${snap.isMobile ? "glassmorphism" : ""}`}>
+                <motion.span
+                  className="text-xl md:text-2xl"
+                  {...headTextAnimation}
+                >
+                  Ready for your next project?
+                </motion.span>
+                <motion.h3
+                  className="text-3xl md:text-[150px] font-bold text-slate-900 tracking-tight md:py-10"
+                  {...headTextAnimationDelay}
+                >
+                  <br />
+                  Let's Talk!
+                </motion.h3>
+              </div>
+              <motion.div
+                className="flex justify-center items-center relative w-[8rem] md:w-[10rem] h-[10rem] relative"
+                {...headContentAnimation}
               >
-                <TbMailShare className="text-[5rem] cursor-pointer relative z-3 fill-[#ccc] hover:scale-110 hover:fill-[#cd455b] transition-all ease-in-out" />
-              </a>
+                <img
+                  src={contactText}
+                  alt="contact"
+                  className="contact-spin z-1 w-full h-full"
+                />
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=sidneyo254@gmail.com"
+                  target="_blank"
+                  className="absolute mx-auto"
+                >
+                  <TbMailShare className="text-[5rem] cursor-pointer relative z-3 fill-[#ccc] hover:scale-110 hover:fill-[#cd455b] transition-all ease-in-out" />
+                </a>
+              </motion.div>
             </motion.div>
-          </motion.div>
+          </motion.section>
           <motion.div
-            className="page-buttons flex w-full justify-center"
+            className="page-buttons absolute flex w-full justify-center bottom-14 md:bottom-10"
             {...headContentAnimation}
           >
             <CustomButton
@@ -83,7 +81,7 @@ const Contact = () => {
               )}
             />
           </motion.div>
-        </motion.section>
+        </>
       )}
     </AnimatePresence>
   );

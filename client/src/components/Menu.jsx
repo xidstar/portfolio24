@@ -1,20 +1,19 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
 import { VscChromeClose } from "react-icons/vsc";
 import { useSnapshot } from "valtio";
-import state from '../store';
+import state from "../store";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-
 
 const Menu = () => {
   const snap = useSnapshot(state);
 
   useEffect(() => {
     state.isMenuOpen = false;
-  }, [snap.intro, snap.about, snap.projects, snap.contact])
+  }, [snap.intro, snap.about, snap.projects, snap.contact]);
 
   return (
     <>
@@ -31,7 +30,7 @@ const Menu = () => {
         )}
       </button>
       <motion.div
-        className={`absolute border-2 border-slate-300 w-full xl:w-96 h-full top-0 z-20 bg-slate-200 duration-700 flex justify-center items-center shadow-3xl ${
+        className={`absolute border-2 border-slate-300 w-full md:w-96 h-full top-0 z-20 bg-slate-200 duration-700 flex justify-center items-center shadow-3xl ${
           snap.isMenuOpen ? "right-0" : "-right-[100%]"
         }`}
       >
@@ -100,10 +99,10 @@ const Menu = () => {
       </motion.div>
     </>
   );
-}
+};
 
 const MenuButton = (props) => {
-  const {label, onClick} = props
+  const { label, onClick } = props;
 
   return (
     <button
@@ -113,6 +112,6 @@ const MenuButton = (props) => {
       {label}
     </button>
   );
-}
+};
 
-export default Menu
+export default Menu;

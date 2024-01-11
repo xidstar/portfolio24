@@ -15,10 +15,10 @@ export const avatarAnimation = () => {
       return "Waving";
   } 
   else if(snap.about) {
-      return "Briefcase";
+      return "Happy";
   }
   else if(snap.projects) {
-      return "Happy";
+      return "Briefcase";
   }
   else {
     return "Salute";

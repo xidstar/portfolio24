@@ -27,7 +27,6 @@ const LoadingScreen = ({ onStarted }) => {
     return animation.stop;
   }, []);
 
-
   useEffect(() => {
     // Simulating an asynchronous operation
     const fetchData = async () => {
@@ -47,7 +46,7 @@ const LoadingScreen = ({ onStarted }) => {
             className={`loadingScreen bg-gradient-to-br from-slate-300 to-violet-500 : ""`}
           >
             {isLoading ? (
-              <div className="flex text-[5rem] xl:text-[8rem] text-slate-800">
+              <div className="flex text-[5rem] md:text-[8rem] text-slate-800">
                 <motion.h1>{rounded}</motion.h1>
                 <motion.h1>%</motion.h1>
               </div>
