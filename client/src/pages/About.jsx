@@ -38,7 +38,7 @@ const About = () => {
     <AnimatePresence>
       {snap.about && (
         <>
-          <motion.section className="flex flex-col justify-center h-[90%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start">
+          <motion.section className="flex flex-col justify-center h-[88%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start">
             <motion.div
               className={`content-wrapper flex flex-col justify-around w-full h-full md:w-1/2 md:h-2/3 p-3 md:p-10 rounded-lg `}
               {...headTextAnimation}
@@ -67,7 +67,7 @@ const About = () => {
             </motion.div>
           </motion.section>
           <motion.div
-            className="page-buttons absolute flex w-full justify-center bottom-14 md:bottom-10"
+            className="page-buttons absolute flex w-full justify-center bottom-10"
             {...headContentAnimation}
           >
             <CustomButton

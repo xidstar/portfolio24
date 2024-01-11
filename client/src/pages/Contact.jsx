@@ -23,7 +23,7 @@ const Contact = () => {
     <AnimatePresence>
       {snap.contact && (
         <>
-          <motion.section className="flex flex-col justify-center h-[90%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start">
+          <motion.section className="flex flex-col justify-center h-[88%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start">
             <motion.div
               className={`page-content flex flex-col w-full h-1/2 md:w-2/3 md:h-2/3 p-3 md:p-10 `}
               {...headTextAnimation}
@@ -59,7 +59,7 @@ const Contact = () => {
             </motion.div>
           </motion.section>
           <motion.div
-            className="page-buttons absolute flex w-full justify-center bottom-14 md:bottom-10"
+            className="page-buttons absolute flex w-full justify-center bottom-10"
             {...headContentAnimation}
           >
             <CustomButton

@@ -53,9 +53,6 @@ export function Avatar(props) {
 
   //Position avatar on screen
   const XPosition = () => {
-    // if(snap.intro) {
-    //   return 0
-    // }
     if (snap.about || snap.intro) {
       return 0.5;
     }
@@ -67,6 +64,15 @@ export function Avatar(props) {
         return 0.5;
       }
       return 0.8;
+    }
+    
+  }
+  const YPosition = () => {
+    if (snap.contact || snap.intro) {
+      if(snap.isMobile) {
+        return 0.5;
+      }
+      return 0;
     }
     
   }
@@ -112,6 +118,7 @@ export function Avatar(props) {
         rotation-x={-Math.PI / 2}
         animate={{
           x: XPosition(),
+          y: YPosition(),
         }}
       >
         <primitive object={nodes.Hips} />

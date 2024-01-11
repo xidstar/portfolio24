@@ -43,7 +43,7 @@ const Skills = () => {
                 </motion.h3>
                 <div className="h-2 w-full bg-slate-200 rounded-full md:mt-2">
                   <motion.div
-                    className="h-full bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full border-2 border-slate-200"
+                    className="h-full bg-gradient-to-r from-violet-700 via-fuchsia-500 to-pink-500 rounded-full border-2 border-slate-200"
                     style={{ width: `${skill.level}%` }}
                     initial={{
                       scaleX: 0,

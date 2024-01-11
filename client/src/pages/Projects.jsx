@@ -17,16 +17,16 @@ const Projects = () => {
       {snap.projects && (
         <>
           <motion.section
-            className="flex justify-start items-center h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto "
+            className="flex justify-start items-center h-screen w-full p-4 md:max-w-screen-xl mx-auto "
             {...headTextAnimation}
           >
-            <motion.div className="tabs flex flex-col w-full h-[70%] md:w-3/4 md:h-3/5  drop-shadow-2xl rounded-lg relative">
+            <motion.div className="tabs flex flex-col w-full h-[65%] md:w-3/4 md:h-3/5  drop-shadow-2xl rounded-lg relative">
               <Carousel />
             </motion.div>
           </motion.section>
 
           <motion.div
-            className="page-buttons absolute flex w-full justify-center bottom-14 md:bottom-10"
+            className="page-buttons absolute flex w-full justify-center bottom-10"
             {...headContentAnimation}
           >
             <CustomButton

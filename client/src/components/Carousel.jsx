@@ -53,8 +53,8 @@ const Carousel = () => {
       <div className="relative h-full ">
         <div className="flex flex-col items-center h-full project-info">
           <motion.div
-            className={`text mb-[50px] md:absolute bottom-20 md:right-0 md:-mr-[10%] z-10 ${
-              snap.isMobile ? "w-[90%]" : ""
+            className={`text mb-[2rem] md:mb-[50px] md:absolute bottom-20 md:right-0 md:-mr-[10%] z-10 ${
+              snap.isMobile ? "w-[85%]" : ""
             }`}
             {...carouselTextAnimation}
           >
@@ -66,7 +66,7 @@ const Carousel = () => {
               <h3 className="font-bold text-xl md:text-3xl">
                 {projects[currentPage].title}
               </h3>
-              <p className="text-2xl text-icon py-5">
+              <p className="text-2xl text-icon py-1 md:py-5">
                 {projects[currentPage].description}
               </p>
               <div className="link-wrapper flex flex-col">
@@ -90,7 +90,7 @@ const Carousel = () => {
             </button>
             {projects.map((project) => (
               <motion.img
-                className="w-full h-full object-cover opacity-90"
+                className="w-full h-full object-fill opacity-90"
                 key={project.title}
                 src={projects[currentPage].img}
                 loading="lazy"
