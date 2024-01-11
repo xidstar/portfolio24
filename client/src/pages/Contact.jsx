@@ -23,43 +23,39 @@ const Contact = () => {
     <AnimatePresence>
       {snap.contact && (
         <>
-          <motion.section className="flex flex-col justify-center h-[80%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start">
+          <motion.section className="flex flex-col justify-center h-[90%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start">
             <motion.div
               className={`page-content flex flex-col w-full h-1/2 md:w-2/3 md:h-2/3 p-3 md:p-10 `}
               {...headTextAnimation}
             >
-              <div className={`${snap.isMobile ? "glassmorphism" : ""}`}>
-                <motion.span
-                  className="text-xl md:text-2xl"
-                  {...headTextAnimation}
-                >
-                  Ready for your next project?
-                </motion.span>
-                <motion.h3
-                  className="text-3xl md:text-[150px] font-bold text-slate-900 tracking-tight md:py-10"
+              <div>
+                <motion.h3 {...headTextAnimation}>
+                  <span className="text-xl md:text-2xl">
+                    Ready for your next project?
+                  </span>
+                  <br />
+                  <span className="text-[3rem] md:text-[150px] font-bold text-slate-900 tracking-tight md:py-10">
+                    Let's Talk!
+                  </span>
+                </motion.h3>
+                <motion.div
+                  className="flex justify-center items-center w-[8rem] md:w-[10rem] h-[10rem] relative"
                   {...headTextAnimationDelay}
                 >
-                  <br />
-                  Let's Talk!
-                </motion.h3>
+                  <img
+                    src={contactText}
+                    alt="contact"
+                    className="contact-spin z-1 w-full h-full"
+                  />
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=sidneyo254@gmail.com"
+                    target="_blank"
+                    className="absolute mx-auto"
+                  >
+                    <TbMailShare className="text-[5rem] cursor-pointer relative z-3 fill-[#ccc] hover:scale-110 hover:fill-[#cd455b] transition-all ease-in-out" />
+                  </a>
+                </motion.div>
               </div>
-              <motion.div
-                className="flex justify-center items-center relative w-[8rem] md:w-[10rem] h-[10rem] relative"
-                {...headContentAnimation}
-              >
-                <img
-                  src={contactText}
-                  alt="contact"
-                  className="contact-spin z-1 w-full h-full"
-                />
-                <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=sidneyo254@gmail.com"
-                  target="_blank"
-                  className="absolute mx-auto"
-                >
-                  <TbMailShare className="text-[5rem] cursor-pointer relative z-3 fill-[#ccc] hover:scale-110 hover:fill-[#cd455b] transition-all ease-in-out" />
-                </a>
-              </motion.div>
             </motion.div>
           </motion.section>
           <motion.div

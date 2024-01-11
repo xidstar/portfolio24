@@ -13,8 +13,8 @@ const Bio = () => {
   return (
     <AnimatePresence>
       <div
-        className={`tabcontent-container md:p-5 h-full relative ${
-          snap.isMobile ? "glassmorphism" : ""
+        className={`tabcontent-container md:p-5 md:h-[50vh] relative ${
+          snap.isMobile ? "glassmorphism h-[60vh]" : ""
         }`}
       >
         <h4 className="font-bold text-icon text-[1.5rem] md:text-3xl pb-5 md:pb-10">

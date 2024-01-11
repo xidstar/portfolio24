@@ -12,8 +12,8 @@ const Skills = () => {
   return (
     <>
       <div
-        className={`tabcontent-container ${
-          snap.isMobile ? "glassmorphism" : ""
+        className={`tabcontent-container md:h-[50vh] ${
+          snap.isMobile ? "glassmorphism h-[60vh]" : ""
         }`}
       >
         <h3 className="md:pt-5 text-icon text-2xl md:text-3xl font-bold">

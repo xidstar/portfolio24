@@ -17,6 +17,7 @@ export const Experience = () => {
   const group = useRef();
 
   const avatarScalingFactor = Math.min(Math.max(window.innerWidth / 1300, 0.5), 1);
+  state.isMobile = window.innerWidth < 768;
 
   const cameraPositionX = useMotionValue();
   const cameraLookAtX = useMotionValue();
@@ -71,6 +72,11 @@ export const Experience = () => {
           animation={avatarAnimation()}
           position-x={snap.isMobile ? -0.5 : ""}
           position-y={snap.isMobile ? 1.8 : ""}
+          visible={
+            (snap.isMobile && snap.projects) || (snap.isMobile && snap.about)
+              ? snap.isVisible
+              : !snap.isVisible
+          }
         />
         <Text
           position={snap.isMenuOpen ? [2, 2.1, -1.8] : [1, 1.8, -5]}

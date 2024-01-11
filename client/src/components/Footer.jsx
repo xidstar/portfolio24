@@ -7,7 +7,7 @@ const Footer = () => {
   }
 
   return (
-    <div className="absolute bottom-5 right-5 font-bold text-footer text-3xl z-0">
+    <div className="absolute bottom-5 right-5 font-bold text-footer text-2xl md:text-3xl z-0">
       sidneyo&copy;{getCurrentYear()}
     </div>
   );

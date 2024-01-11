@@ -20,7 +20,7 @@ const Home = () => {
     <AnimatePresence>
       {snap.intro && (
         <motion.section
-          className="flex flex-col justify-center h-[90%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start"
+          className="flex flex-col justify-center h-[95%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start"
           {...slideAnimation("left")}
         >
           <motion.div

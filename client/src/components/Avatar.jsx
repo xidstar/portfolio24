@@ -57,19 +57,23 @@ export function Avatar(props) {
     //   return 0
     // }
     if (snap.about || snap.intro) {
-      return 0.5
+      return 0.5;
     }
     else if (snap.projects) {
       return 1.2;
     }
     else if (snap.contact) {
+      if(snap.isMobile) {
+        return 0.5;
+      }
       return 0.8;
     }
+    
   }
 
   //Avatar to follow mouse movement
   useFrame((state) => {
-    if(cursorFollow) {
+    if(cursorFollow && !snap.isMobile) {
       const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
       group.current.getObjectByName("Spine2").lookAt(target);
     }

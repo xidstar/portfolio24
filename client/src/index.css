@@ -76,6 +76,10 @@ html {
   font-family: 'Caveat', cursive;
 }
 
+.project-info svg .cls-1 {
+  stroke: #d61a39;
+}
+
 @media(min-width: 768px) {
 .project-info svg .cls-1 {
     stroke: #cbd5e1;
