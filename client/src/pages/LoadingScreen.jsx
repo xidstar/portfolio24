@@ -53,7 +53,7 @@ const LoadingScreen = ({ onStarted }) => {
             ) : (
               <motion.div {...headTextAnimation}>
                 <CustomButton
-                  type=" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Explore"
+                  type=" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; explore"
                   title="Intro"
                   handleClick={() => (
                     (state.loading = false), (state.intro = true)

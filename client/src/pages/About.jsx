@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import tabSound from "/audio/interface.mp3";
 import { useSnapshot } from "valtio";
 
 import state from "../store";
@@ -21,6 +22,7 @@ import { AboutTabs } from "../config/constants";
 const About = () => {
   const snap = useSnapshot(state);
   const [isActiveTab, setIsActiveTab] = useState("Bio");
+  const [ping] = useState(new Audio(tabSound));
 
   const generateTabContent = () => {
     switch (isActiveTab) {
@@ -51,7 +53,12 @@ const About = () => {
                     <Tab
                       {...slideAnimation}
                       tab={tab}
-                      handleClick={() => setIsActiveTab(tab.title)}
+                      handleClick={() => {
+                        ping.volume = 0.08;
+                        ping.play()
+                        setIsActiveTab(tab.title)
+
+                      }}
                       customStyles={`${
                         isActiveTab === tab.title
                           ? "bg-purple-700 scale-105 h-[130px] hover:scale-110 text-white"
