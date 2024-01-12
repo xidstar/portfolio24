@@ -11,7 +11,7 @@ const CustomButton = ({ title, type, handleClick }) => {
 
   const clickSoundHandler = () => {
     audio.volume = 0.08;
-    {type === "next" ? audio.play() : ""}
+    {(snap.isPlaying && type === "next") ? audio.play() : ""}
     
     handleClick();
   };

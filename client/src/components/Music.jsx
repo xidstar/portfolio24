@@ -39,7 +39,7 @@ const Music = () => {
           <PiSpeakerSimpleSlashFill />
         )}
       </button>
-      <audio ref={audioRef} src="/audio/pianos-by-jtwayne-7-174717.mp3" loop />
+      <audio ref={audioRef} src="/audio/pianos.mp3" loop />
     </div>
   );
 };

@@ -55,7 +55,7 @@ const About = () => {
                       tab={tab}
                       handleClick={() => {
                         ping.volume = 0.08;
-                        ping.play()
+                        {snap.isPlaying ? ping.play() : ""}
                         setIsActiveTab(tab.title)
 
                       }}
