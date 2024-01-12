@@ -10,7 +10,8 @@ const state = proxy({
   isLogo: false,
   isMenuOpen: false,
   isVisible: false,
-  isMobile: 0
+  isMobile: 0,
+  isPlaying: true,
 });
 
 export default state;

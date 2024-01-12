@@ -12,10 +12,10 @@ export const avatarAnimation = () => {
       return "Pow";
   } 
   if(snap.intro) {
-      return "Waving";
+      return "Happy";
   } 
   else if(snap.about) {
-      return "Happy";
+      return "Waving";
   }
   else if(snap.projects) {
       return "Briefcase";
