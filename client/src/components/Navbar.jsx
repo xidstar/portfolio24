@@ -14,6 +14,7 @@ import {
 
 import { Menu } from "../components";
 import { logo } from "../assets";
+import Music from "./Music";
 
 const Navbar = ({ props }) => {
   const snap = useSnapshot(state);
@@ -36,6 +37,7 @@ const Navbar = ({ props }) => {
               (state.contact = false)
             )}
           />
+          <Music />
         </div>
       </motion.div>
 

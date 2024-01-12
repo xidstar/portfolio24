@@ -87,7 +87,7 @@ export function Avatar(props) {
 
   useEffect(() => {
     //Set cursor follow
-    if (snap.intro || snap.contact) {
+    if (snap.about || snap.contact) {
       cursorFollow = true;
     }
     if(snap.isMenuOpen) {
