@@ -11,7 +11,7 @@ const state = proxy({
   isMenuOpen: false,
   isVisible: false,
   isMobile: 0,
-  isPlaying: true,
+  isPlaying: false,
 });
 
 export default state;
