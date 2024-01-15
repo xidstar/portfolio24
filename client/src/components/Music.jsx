@@ -15,9 +15,9 @@ const Music = () => {
   // Set the default volume %
   useEffect(() => {
     if (snap.intro) {
-      audioRef.current.volume = 0.1;
+      audioRef.current.volume = 0.15;
     } else {
-      audioRef.current.volume = 0.03;
+      audioRef.current.volume = 0.08;
     }
   }, [snap.intro, snap.isPlaying]);
 
