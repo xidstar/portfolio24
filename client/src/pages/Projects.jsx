@@ -20,7 +20,7 @@ const Projects = () => {
             className="flex justify-start items-center h-screen w-full p-4 md:max-w-screen-xl mx-auto "
             {...headTextAnimation}
           >
-            <motion.div className="tabs flex flex-col w-full h-[55%] md:w-2/3 drop-shadow-2xl rounded-lg relative">
+            <motion.div className="tabs flex flex-col w-full h-[55%] max-w-[35rem] md:w-2/3 drop-shadow-2xl rounded-lg relative">
               <Carousel />
             </motion.div>
           </motion.section>

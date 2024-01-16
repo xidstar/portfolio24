@@ -16,7 +16,7 @@ const Skills = () => {
           snap.isMobile ? "glassmorphism h-[60vh]" : ""
         }`}
       >
-        <h3 className="md:pt-5 text-icon text-2xl md:text-3xl font-bold">
+        <h3 className="xl:pt-5 text-icon text-2xl xl:text-3xl font-bold">
           Development
         </h3>
 
@@ -25,7 +25,7 @@ const Skills = () => {
             {skillset.map((skill, index) => (
               <div className="w-full md:w-5/6" key={index}>
                 <motion.h3
-                  className="md:text-xl font-semibold text-slate-800 pt-2 md:pt-0"
+                  className="xl:text-xl font-semibold text-slate-800 pt-2 md:pt-0"
                   initial={{
                     opacity: 0,
                   }}
@@ -66,7 +66,7 @@ const Skills = () => {
         </motion.div>
 
         <div className="py-3 md:py-10">
-          <h3 className="pb-5 text-icon text-2xl md:text-3xl font-bold">
+          <h3 className="pb-5 text-icon text-2xl xl:text-3xl font-bold">
             Design Tools
           </h3>
 
@@ -90,7 +90,7 @@ const Skills = () => {
                 <a
                   href={resume}
                   target="_blank"
-                  className="resume relative text-icon text-center md:text-left font-bold text-2xl md:text-3xl xl
+                  className="resume relative text-icon text-center md:text-left font-bold text-2xl xl:text-3xl xl
                 :pb-2 z-10 hover:scale-110 transition ease-in-out"
                 >
                   Resume

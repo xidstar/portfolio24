@@ -17,11 +17,11 @@ const Bio = () => {
           snap.isMobile ? "glassmorphism h-[60vh]" : ""
         }`}
       >
-        <h4 className="font-bold text-icon text-[1.5rem] md:text-3xl pb-5 md:pb-10">
+        <h4 className="font-bold text-icon text-[1.5rem] xl:text-3xl pb-5 md:pb-10">
           "Passionately Curious..."
         </h4>
         <motion.p
-          className="text-[1.1rem] md:text-2xl text-left"
+          className="text-[1.1rem] xl:text-2xl text-left"
           {...headTextAnimation}
         >
           I'm a creative web developer with a keen focus on interactivity,
@@ -31,7 +31,7 @@ const Bio = () => {
         </motion.p>
         <br />
         <motion.p
-          className="text-[1.1rem] md:text-2xl text-left"
+          className="text-[1.1rem] xl:text-2xl text-left"
           {...headTextAnimation}
         >
           I'm passionate about translating ideas and brand values into
@@ -50,7 +50,7 @@ const Bio = () => {
               />
               <div>
                 <p
-                  className="text-icon font-bold text-[1.3rem] md:text-3xl xl
+                  className="text-icon font-bold text-[1.3rem] xl:text-3xl xl
                 :pb-2"
                 >
                   Maryland, US
