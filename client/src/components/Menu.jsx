@@ -79,21 +79,21 @@ const Menu = () => {
             target="_blank"
             className="hover:cursor-pointer hover:text-[#d61a39]"
           >
-            <BsLinkedin className="text-3xl m-5" />
+            <BsLinkedin className="text-3xl m-2" />
           </a>
           <a
             href="https://github.com/xidstar"
             target="_blank"
             className="hover:cursor-pointer hover:text-[#d61a39]"
           >
-            <FaGithub className="text-4xl m-5" />
+            <FaGithub className="text-4xl m-2" />
           </a>
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=sidneyo254@gmail.com"
             target="_blank"
             className="hover:cursor-pointer hover:text-[#d61a39]"
           >
-            <IoMdMail className="text-4xl m-5" />
+            <IoMdMail className="text-4xl m-2" />
           </a>
         </div>
       </motion.div>

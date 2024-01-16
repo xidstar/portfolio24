@@ -63,7 +63,7 @@ const Carousel = () => {
                 snap.isMobile ? "text-slate-900 font-bold" : ""
               }`}
             >
-              <h3 className="font-bold text-xl md:text-3xl">
+              <h3 className="font-bold text-xl md:text-3xl shadow-text">
                 {projects[currentPage].title}
               </h3>
               <p className="text-2xl text-icon py-1 md:py-5">
@@ -81,7 +81,7 @@ const Carousel = () => {
               </div>
             </div>
           </motion.div>
-          <div className="flex w-full h-full overflow-hidden relative">
+          <div className="flex w-full h-full overflow-hidden relative drop-shadow-2xl">
             <button
               onClick={goToPreviousPage}
               className="absolute left-0 top-0 bottom-0 text-slate-200 z-20"

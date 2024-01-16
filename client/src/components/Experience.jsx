@@ -79,7 +79,7 @@ export const Experience = () => {
           }
         />
         <Text
-          position={snap.isMenuOpen ? [2, 2.1, -1.8] : [1, 1.8, -5]}
+          position={[1, 1.8, -5]}
           rotation={[0, 0, 0]}
           scale={snap.isMenuOpen ? 0.5 : 1.2}
           color={0x403e3e}

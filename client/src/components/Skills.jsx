@@ -81,7 +81,11 @@ const Skills = () => {
 
           <div className="resume-wrapper flex gap-5 md:mt-[2rem]">
             <div className="flex items-center relative h-[5rem]">
-              <img src={file} alt="figma" className="relative w-14 h-auto" />
+              <img
+                src={file}
+                alt="figma"
+                className="relative w-14 h-auto"
+              />
               <div className="link-wrapper flex flex-col">
                 <a
                   href={resume}

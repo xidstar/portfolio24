@@ -48,6 +48,9 @@ html {
   overflow-y: scroll;
 }
 
+.shadow-text {
+  text-shadow: 2px 2px 9px #000;
+}
 
 .leva-c-kWgxhW {
   display: none !important;
