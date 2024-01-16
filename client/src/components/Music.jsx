@@ -17,7 +17,7 @@ const Music = () => {
     if (snap.intro) {
       audioRef.current.volume = 0.15;
     } else {
-      audioRef.current.volume = 0.08;
+      audioRef.current.volume = 0.06;
     }
   }, [snap.intro, snap.isPlaying]);
 

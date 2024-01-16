@@ -32,10 +32,10 @@ const Home = () => {
                 className="text-[3rem] md:text-[100px] font-bold  tracking-tight"
                 {...headTextAnimation}
               >
-                <span className="shadow-text">Hi, I'm</span>
+                <span className="">Hi, I'm</span>
 
                 <span className="color-text-wrapper relative pl-5">
-                  <span className="text-icon font-bold h-[3.2rem] md:h-[8rem]">
+                  <span className="text-icon font-bold h-[4rem] md:h-[8rem]">
                     Sid!
                   </span>
                   <Underline />

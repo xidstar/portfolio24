@@ -60,10 +60,10 @@ const Carousel = () => {
           >
             <div
               className={`flex flex-col justify-center text-slate-200 !relative ${
-                snap.isMobile ? "text-slate-900 font-bold" : ""
+                snap.isMobile ? "text-slate-800 font-bold" : ""
               }`}
             >
-              <h3 className="font-bold text-xl md:text-3xl shadow-text">
+              <h3 className="font-bold text-xl md:text-3xl">
                 {projects[currentPage].title}
               </h3>
               <p className="text-2xl text-icon py-1 md:py-5">

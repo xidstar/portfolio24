@@ -25,7 +25,7 @@ html {
 }
 
 .page-content {
-  @apply relative h-full flex-1 md:justify-center justify-end flex flex-col gap-10;
+  @apply relative h-full flex-1 md:justify-center justify-end flex flex-col md:gap-10;
 }
 
 .head-text {
@@ -46,10 +46,6 @@ html {
   border-radius: 20px;
   overflow-x: hidden;
   overflow-y: scroll;
-}
-
-.shadow-text {
-  text-shadow: 2px 2px 2px #000;
 }
 
 .leva-c-kWgxhW {

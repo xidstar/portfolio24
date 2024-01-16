@@ -34,7 +34,7 @@ const Contact = () => {
                     Ready for your next project?
                   </span>
                   <br />
-                  <span className="text-[3rem] md:text-[150px] font-bold text-slate-800 tracking-tight md:py-10 shadow-text">
+                  <span className="text-[3rem] md:text-[150px] font-bold text-slate-800 tracking-tight md:py-10">
                     Let's Talk!
                   </span>
                 </motion.h3>

@@ -47,7 +47,7 @@ const About = () => {
             >
               <div className="tab-title-wrapper flex flex-col items-center justify-center pb-10"></div>
 
-              <div className="btn-wrapper flex justify-start gap-10 w-full">
+              <div className="btn-wrapper flex justify-center md:justify-start gap-10 w-full">
                 {AboutTabs.map((tab) => (
                   <motion.div key={tab.title}>
                     <Tab
