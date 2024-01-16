@@ -24,14 +24,18 @@ const Home = () => {
           {...slideAnimation("left")}
         >
           <motion.div
-            className="page-content flex flex-col w-full h-full md:w-1/2 md:h-2/3"
+            className="page-content flex flex-col w-full h-full md:w-1/2 md:h-2/3 text-slate-800"
             {...headContainerAnimation}
           >
             <div className={`${snap.isMobile ? "p-2" : ""}`}>
-              <motion.h1 className="head-text" {...headTextAnimation}>
-                Hi, I'm
+              <motion.h1
+                className="text-[3rem] md:text-[100px] font-bold  tracking-tight"
+                {...headTextAnimation}
+              >
+                <span className="shadow-text">Hi, I'm</span>
+
                 <span className="color-text-wrapper relative pl-5">
-                  <span className="text-icon font-bold h-[3.2rem] md:h-[4.5rem]">
+                  <span className="text-icon font-bold h-[3.2rem] md:h-[8rem]">
                     Sid!
                   </span>
                   <Underline />

@@ -30,11 +30,11 @@ const Menu = () => {
         )}
       </button>
       <motion.div
-        className={`absolute border-2 border-slate-300 w-full md:w-96 h-full top-0 z-20 bg-slate-200 duration-700 flex justify-center items-center shadow-3xl ${
+        className={`absolute border-2  w-full md:w-96 h-full top-0 z-20 bg-slate-200 duration-700 flex justify-center items-center shadow-3xl ${
           snap.isMenuOpen ? "right-0" : "-right-[100%]"
         }`}
       >
-        <div className="menu-wrapper flex gap-10 flex-col text-3xl">
+        <div className="menu-wrapper flex gap-10 flex-col text-3xl text-slate-800">
           <MenuButton
             label="Intro"
             onClick={() => (

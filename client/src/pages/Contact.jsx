@@ -30,11 +30,11 @@ const Contact = () => {
             >
               <div>
                 <motion.h3 {...headTextAnimation}>
-                  <span className="text-xl md:text-2xl">
+                  <span className="text-xl md:text-3xl">
                     Ready for your next project?
                   </span>
                   <br />
-                  <span className="text-[3rem] md:text-[150px] font-bold text-slate-900 tracking-tight md:py-10">
+                  <span className="text-[3rem] md:text-[150px] font-bold text-slate-800 tracking-tight md:py-10 shadow-text">
                     Let's Talk!
                   </span>
                 </motion.h3>

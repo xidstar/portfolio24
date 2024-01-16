@@ -49,7 +49,7 @@ html {
 }
 
 .shadow-text {
-  text-shadow: 2px 2px 9px #000;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .leva-c-kWgxhW {
@@ -102,7 +102,7 @@ html {
 
 .cls-1 {
   fill: none;
-  stroke: #000;
+  stroke: #0e0d0d;
   stroke-linecap: round;
   stroke-width: 7px;
   fill-rule: evenodd;
@@ -110,7 +110,7 @@ html {
 
 .dash {
   fill: none;
-  stroke: #000;
+  stroke: #0e0d0d;
   stroke-width: 3.8054;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -154,7 +154,7 @@ html {
 
 .color-text {
   font-family: 'Permanent Marker', cursive;
-  background-image: -webkit-linear-gradient(92deg, #000000, transparent);
+  background-image: -webkit-linear-gradient(88deg, #000000, transparent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* -webkit-animation: hue 10s infinite linear; */
