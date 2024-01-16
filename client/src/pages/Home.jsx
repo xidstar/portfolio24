@@ -20,7 +20,7 @@ const Home = () => {
     <AnimatePresence>
       {snap.intro && (
         <motion.section
-          className="flex flex-col justify-center h-[95%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start"
+          className="flex flex-col justify-center h-[90%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start"
           {...slideAnimation("left")}
         >
           <motion.div
@@ -29,13 +29,13 @@ const Home = () => {
           >
             <div className={`${snap.isMobile ? "p-2" : ""}`}>
               <motion.h1
-                className="text-[3rem] md:text-[100px] font-bold  tracking-tight"
+                className="text-[3rem] md:text-[5rem] xl:text-[100px] font-bold  tracking-tight"
                 {...headTextAnimation}
               >
                 <span className="">Hi, I'm</span>
 
                 <span className="color-text-wrapper relative pl-5">
-                  <span className="text-icon font-bold h-[4rem] md:h-[8rem]">
+                  <span className="text-icon font-bold h-[4rem] md:h-[7rem] xl:h-[8rem]">
                     Sid!
                   </span>
                   <Underline />
@@ -43,7 +43,7 @@ const Home = () => {
               </motion.h1>
               <br />
               <motion.h3
-                className="text-xl md:text-3xl"
+                className="text-xl md:text-2xl xl:text-3xl"
                 {...headTextAnimationDelay}
               >
                 I develop websites, user interfaces, web applications, and 2D &
@@ -51,7 +51,7 @@ const Home = () => {
               </motion.h3>
 
               <motion.div {...headTextAnimation}>
-                <h3 className="text-xl pt-5 md:text-2xl font-bold">
+                <h3 className="text-xl py-5 md:text-2xl font-bold">
                   Front End / Creative
                   <br className="hidden sm:block" />
                   Developer

@@ -23,23 +23,23 @@ const Contact = () => {
     <AnimatePresence>
       {snap.contact && (
         <>
-          <motion.section className="flex flex-col justify-center h-[88%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start">
+          <motion.section className="flex flex-col justify-center h-[90%] md:h-screen w-full p-4 xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto items-start">
             <motion.div
-              className={`page-content flex flex-col w-full h-1/2 md:w-2/3 md:h-2/3 p-3 md:p-10 `}
+              className={`page-content flex flex-col w-full h-1/2 xl:w-2/3 p-3 xl:p-10 `}
               {...headTextAnimation}
             >
               <div>
                 <motion.h3 {...headTextAnimation}>
-                  <span className="text-xl md:text-3xl">
+                  <span className="text-xl md:text-2xl xl:text-3xl">
                     Ready for your next project?
                   </span>
                   <br />
-                  <span className="text-[3rem] md:text-[150px] font-bold text-slate-800 tracking-tight md:py-10">
+                  <span className="text-[3rem] md:text-[6rem] xl:text-[150px] font-bold text-slate-800 tracking-tight xl:py-10">
                     Let's Talk!
                   </span>
                 </motion.h3>
                 <motion.div
-                  className="flex justify-center items-center w-[8rem] md:w-[10rem] h-[10rem] relative"
+                  className="flex justify-center items-center w-[8rem] xl:w-[10rem] h-[10rem] relative"
                   {...headTextAnimationDelay}
                 >
                   <img

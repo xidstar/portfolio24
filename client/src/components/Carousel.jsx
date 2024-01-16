@@ -12,6 +12,8 @@ import { carouselTextAnimation } from "../config/motion";
 const Carousel = () => {
   const snap = useSnapshot(state);
   const [currentPage, setCurrentPage] = useState(0);
+  let isMobile = window.innerWidth < 768;
+  let isTablet = window.innerWidth < 1025;
 
   const goToPage = (pageIndex) => {
     setCurrentPage(pageIndex);
@@ -51,16 +53,20 @@ const Carousel = () => {
   return (
     <AnimatePresence>
       <div className="relative h-full ">
-        <div className="flex flex-col items-center h-full project-info">
+        <div
+          className={`flex flex-col h-full project-info ${
+            isTablet ? "items-start" : " items-center"
+          }`}
+        >
           <motion.div
-            className={`text mb-[2rem] md:mb-[50px] md:absolute bottom-20 md:right-0 md:-mr-[10%] z-10 ${
-              snap.isMobile ? "w-[85%]" : ""
+            className={`text mb-[2rem] md:mb-[50px] xl:absolute bottom-0 md:right-0 md:-mr-[10%] z-10 ${
+              isMobile ? "w-[85%]" : ""
             }`}
             {...carouselTextAnimation}
           >
             <div
               className={`flex flex-col justify-center text-slate-200 !relative ${
-                snap.isMobile ? "text-slate-800 font-bold" : ""
+                isTablet ? "text-slate-800 font-bold" : ""
               }`}
             >
               <h3 className="font-bold text-xl md:text-3xl">

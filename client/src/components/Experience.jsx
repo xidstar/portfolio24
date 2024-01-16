@@ -16,8 +16,9 @@ export const Experience = () => {
   const snap = useSnapshot(state);
   const group = useRef();
 
-  const avatarScalingFactor = Math.min(Math.max(window.innerWidth / 1300, 0.5), 1);
-  state.isMobile = window.innerWidth < 768;
+  const avatarScalingFactor = Math.min(Math.max(window.innerWidth / 768, 0.5), 1);
+  let isMobile = window.innerWidth < 768;
+  let isTablet = window.innerWidth < 1025;
 
   const cameraPositionX = useMotionValue();
   const cameraLookAtX = useMotionValue();
@@ -70,10 +71,10 @@ export const Experience = () => {
         />
         <Avatar
           animation={avatarAnimation()}
-          position-x={snap.isMobile ? -0.5 : ""}
-          position-y={snap.isMobile ? 1.8 : ""}
+          position-x={isMobile ? -0.5 : ""}
+          position-y={isMobile ? 1.8 : ""}
           visible={
-            (snap.isMobile && snap.projects) || (snap.isMobile && snap.about)
+            (isMobile && snap.projects) || (isMobile && snap.about)
               ? snap.isVisible
               : !snap.isVisible
           }
@@ -81,9 +82,9 @@ export const Experience = () => {
         <Text
           position={[1, 1.8, -5]}
           rotation={[0, 0, 0]}
-          scale={snap.isMenuOpen ? 0.5 : 1.2}
+          scale={isTablet ? 0.7 : 1.2}
           color={0x403e3e}
-          visible={snap.isMobile ? snap.isVisible : !snap.isVisible}
+          visible={isMobile ? snap.isVisible : !snap.isVisible}
           // color={snap.intro || snap.projects ? 0x403e3e : 0xcccccc}
           // anchorX="center"
         >

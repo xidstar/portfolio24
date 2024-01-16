@@ -16,16 +16,16 @@ const Skills = () => {
           snap.isMobile ? "glassmorphism h-[60vh]" : ""
         }`}
       >
-        <h3 className="xl:pt-5 text-icon text-2xl xl:text-3xl font-bold">
+        <h3 className="py-5 text-icon text-2xl xl:text-3xl font-bold">
           Development
         </h3>
 
         <motion.div whileInView={"visible"}>
-          <div className="mt-4 md:mt-8 md:space-y-4">
+          <div className="">
             {skillset.map((skill, index) => (
-              <div className="w-full md:w-5/6" key={index}>
+              <div className="w-full md:w-5/6 p-0 py-1" key={index}>
                 <motion.h3
-                  className="xl:text-xl font-semibold text-slate-800 pt-2 md:pt-0"
+                  className="xl:text-xl font-semibold text-slate-800"
                   initial={{
                     opacity: 0,
                   }}
@@ -41,7 +41,7 @@ const Skills = () => {
                 >
                   {skill.name}
                 </motion.h3>
-                <div className="h-2 w-full bg-slate-200 rounded-full md:mt-2">
+                <div className="h-2 w-full bg-slate-200 rounded-full">
                   <motion.div
                     className="h-full bg-gradient-to-r from-violet-700 via-fuchsia-500 to-pink-500 rounded-full border-2 border-slate-200"
                     style={{ width: `${skill.level}%` }}
@@ -65,8 +65,8 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        <div className="py-3 md:py-10">
-          <h3 className="pb-5 text-icon text-2xl xl:text-3xl font-bold">
+        <div className="">
+          <h3 className="py-5 text-icon text-2xl xl:text-3xl font-bold">
             Design Tools
           </h3>
 
@@ -79,7 +79,7 @@ const Skills = () => {
             <p>Procreate</p>
           </div>
 
-          <div className="resume-wrapper flex gap-5 md:mt-[2rem]">
+          <div className="resume-wrapper flex">
             <div className="flex items-center relative h-[5rem]">
               <img
                 src={file}

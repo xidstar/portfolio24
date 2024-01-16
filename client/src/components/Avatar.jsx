@@ -14,6 +14,7 @@ import state from "../store";
 
 export function Avatar(props) {
   const snap = useSnapshot(state);
+  let isTablet = window.innerWidth < 1025;
 
   const {animation} = props;
 
@@ -57,10 +58,16 @@ export function Avatar(props) {
       return 0.5;
     }
     else if (snap.projects) {
+      if (isTablet) {
+        return 0.7;
+      }
       return 1.2;
     }
     else if (snap.contact) {
       if(snap.isMobile) {
+        return 0.5;
+      }
+      if (isTablet) {
         return 0.5;
       }
       return 0.8;
@@ -69,9 +76,6 @@ export function Avatar(props) {
   }
   const YPosition = () => {
     if (snap.contact || snap.intro) {
-      if(snap.isMobile) {
-        return 0.5;
-      }
       return 0;
     }
     
@@ -79,7 +83,7 @@ export function Avatar(props) {
 
   //Avatar to follow mouse movement
   useFrame((state) => {
-    if(cursorFollow && !snap.isMobile) {
+    if(cursorFollow && !isTablet) {
       const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
       group.current.getObjectByName("Spine2").lookAt(target);
     }

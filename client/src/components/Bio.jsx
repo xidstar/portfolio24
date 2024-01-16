@@ -13,15 +13,15 @@ const Bio = () => {
   return (
     <AnimatePresence>
       <div
-        className={`tabcontent-container md:p-5 md:h-[50vh] relative ${
+        className={`tabcontent-container sm:p-5 sm:h-[50vh] relative ${
           snap.isMobile ? "glassmorphism h-[60vh]" : ""
         }`}
       >
-        <h4 className="font-bold text-icon text-[1.5rem] xl:text-3xl pb-5 md:pb-10">
+        <h4 className="font-bold text-icon text-[1.5rem] xl:text-3xl pb-5 sm:pb-10">
           "Passionately Curious..."
         </h4>
         <motion.p
-          className="text-[1.1rem] xl:text-2xl text-left"
+          className="text-xl xl:text-2xl text-left"
           {...headTextAnimation}
         >
           I'm a creative web developer with a keen focus on interactivity,
@@ -31,7 +31,7 @@ const Bio = () => {
         </motion.p>
         <br />
         <motion.p
-          className="text-[1.1rem] xl:text-2xl text-left"
+          className="text-xl xl:text-2xl text-left"
           {...headTextAnimation}
         >
           I'm passionate about translating ideas and brand values into
@@ -39,7 +39,7 @@ const Bio = () => {
           for great design, in all its forms.
         </motion.p>
 
-        <motion.div className="py-2 md:mt-[2rem]">
+        <motion.div className="py-2 sm:mt-[2rem]">
           <div className="img-wrapper gap-5 flex flex-col">
             <div className="flex items-center">
               <motion.img
