@@ -13,15 +13,13 @@ const Bio = () => {
   return (
     <AnimatePresence>
       <div
-        className={`tabcontent-container sm:p-5 sm:h-[50vh] relative ${
-          snap.isMobile ? "glassmorphism h-[60vh]" : ""
-        }`}
+        className={`tabcontent-container sm:p-5 sm:h-[50vh] relative`}
       >
         <h4 className="font-bold text-icon text-[1.5rem] xl:text-3xl pb-5 sm:pb-10">
           "Passionately Curious..."
         </h4>
         <motion.p
-          className="text-xl xl:text-2xl text-left"
+          className="text-xl 2xl:text-2xl text-left"
           {...headTextAnimation}
         >
           I'm a creative web developer with a keen focus on interactivity,
@@ -31,7 +29,7 @@ const Bio = () => {
         </motion.p>
         <br />
         <motion.p
-          className="text-xl xl:text-2xl text-left"
+          className="text-xl 2xl:text-2xl text-left"
           {...headTextAnimation}
         >
           I'm passionate about translating ideas and brand values into

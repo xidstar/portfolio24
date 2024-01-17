@@ -40,7 +40,7 @@ const About = () => {
     <AnimatePresence>
       {snap.about && (
         <>
-          <motion.section className="flex flex-col justify-center h-[88%] md:h-screen w-full p-4 md:max-w-screen-xl  mx-auto items-start">
+          <motion.section className="flex flex-col justify-center h-[88%] w-full p-4 md:max-w-screen-xl  mx-auto items-start">
             <motion.div
               className={`content-wrapper flex flex-col justify-around w-full h-full md:w-2/3 md:h-2/3 xl:w-1/2 p-3 xl:p-10 rounded-lg `}
               {...headTextAnimation}
