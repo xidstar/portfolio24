@@ -35,28 +35,26 @@ const Home = () => {
                 <span className="">Hi, I'm</span>
 
                 <span className="color-text-wrapper relative pl-5">
-                  <span className="text-icon font-bold h-[4rem] md:h-[7rem] xl:h-[8rem]">
+                  <span className="text-icon font-bold h-[4rem] md:h-[7rem] xl:h-[8rem] text-purple-900">
                     Sid!
                   </span>
                   <Underline />
                 </span>
               </motion.h1>
               <br />
+              <motion.div {...headTextAnimation}>
+                <h3 className="text-xl py-5 md:text-2xl font-bold">
+                  Front End / Creative Developer
+                </h3>
+              </motion.div>
+
               <motion.h3
-                className="text-xl md:text-2xl xl:text-3xl"
+                className="text-xl md:text-2xl"
                 {...headTextAnimationDelay}
               >
                 I develop websites, user interfaces, web applications, and 2D &
                 3D visuals.
               </motion.h3>
-
-              <motion.div {...headTextAnimation}>
-                <h3 className="text-xl py-5 md:text-2xl font-bold">
-                  Front End / Creative
-                  <br className="hidden sm:block" />
-                  Developer
-                </h3>
-              </motion.div>
             </div>
 
             <CustomButton

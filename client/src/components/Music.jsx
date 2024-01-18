@@ -12,8 +12,15 @@ const Music = () => {
   const snap = useSnapshot(state);
   const audioRef = useRef(null);
 
+ 
+
   // Set the default volume %
-  useEffect(() => {
+  useEffect(() => { 
+    if (snap.isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
     if (snap.intro) {
       audioRef.current.volume = 0.15;
     } else {
@@ -22,16 +29,12 @@ const Music = () => {
   }, [snap.intro, snap.isPlaying]);
 
   const playPauseHandler = () => {
-    if (snap.isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
+    
     state.isPlaying = !snap.isPlaying;
   };
 
   return (
-    <div className="absolute right-20 text-3xl">
+    <div className="absolute right-14 md:right-20 text-3xl">
       <button onClick={playPauseHandler}>
         {snap.isPlaying ? (
           <PiSpeakerSimpleHighFill />

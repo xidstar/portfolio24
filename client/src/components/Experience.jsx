@@ -38,7 +38,7 @@ export const Experience = () => {
 
   // useEffect(() => {
   //   animate(cameraPositionX, snap.about ? 3 : 0, {...framerMotionConfig});
-  //   animate(cameraLookAtX, snap.about ? -1.5 : 0, {...framerMotionConfig});
+  //   animate(cameraLookAtX, snap.about ? -1.2 : 0, {...framerMotionConfig});
   // }, [snap.about])
 
   useEffect(() => {
@@ -80,7 +80,7 @@ export const Experience = () => {
           }
         />
         <Text
-          position={[1, 1.8, -5]}
+          position={isTablet ? [0, 1.8, -5] : [1, 1.8, -5]}
           rotation={[0, 0, 0]}
           scale={isTablet ? 0.7 : 1.2}
           color={0x403e3e}

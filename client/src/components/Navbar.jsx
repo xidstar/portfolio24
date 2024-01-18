@@ -22,7 +22,7 @@ const Navbar = ({ props }) => {
   return (
     <>
       <motion.div
-        className="absolute z-10 top-5 w-screen px-5"
+        className="absolute z-10 top-5 w-screen px-3 xl:px-5"
         {...fadeAnimation}
       >
         <div className="navbar w-full flex justify-between items-center m-auto relative">

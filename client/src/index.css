@@ -77,23 +77,16 @@ html {
 }
 
 .project-info svg .cls-1 {
-  stroke: #d61a39;
+  stroke: #f1415e;
 }
-
-@media(min-width: 1026px) {
-.project-info svg .cls-1 {
-    stroke: #cbd5e1;
-  }
-}
-
 
 .link-wrapper:hover .cls-1 {
-  stroke: #d61a39;
+  stroke: #f1415e;
   transition: all .3s ease-in-out;
 }
 
 .link-wrapper:hover > a {
-  color: #d61a39;
+  color: #f1415e;
 }
 
 .cls-1 {
@@ -115,7 +108,7 @@ html {
 
 .menu-wrapper button:hover {
   transition: all .2s ease-in-out;
-  color: #d61a39;
+  color: #f1415e;
   font-family: 'Caveat', cursive;
   font-style: bold;
   font-size: 2.5rem;
