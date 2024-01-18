@@ -29,7 +29,6 @@ const Music = () => {
   }, [snap.intro, snap.isPlaying]);
 
   const playPauseHandler = () => {
-    
     state.isPlaying = !snap.isPlaying;
   };
 

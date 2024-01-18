@@ -43,13 +43,13 @@ const Home = () => {
               </motion.h1>
               <br />
               <motion.div {...headTextAnimation}>
-                <h3 className="text-xl py-5 md:text-2xl font-bold">
+                <h3 className="text-xl md:text-2xl font-bold">
                   Front End / Creative Developer
                 </h3>
               </motion.div>
 
               <motion.h3
-                className="text-xl md:text-2xl"
+                className="text-xl md:text-2xl py-5"
                 {...headTextAnimationDelay}
               >
                 I develop websites, user interfaces, web applications, and 2D &

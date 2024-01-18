@@ -80,6 +80,10 @@ html {
   stroke: #f1415e;
 }
 
+.resume-wrapper svg .cls-1 {
+  stroke: #272626;
+}
+
 .link-wrapper:hover .cls-1 {
   stroke: #f1415e;
   transition: all .3s ease-in-out;

@@ -26,7 +26,7 @@ export const projects = [
   {
     title: "Portfolio 2023",
     description: "React, Sass",
-    url: "https://sidneyo.netlify.app/",
+    url: "https://sidneyo23.netlify.app/",
     img: portfolio,
   },
   {
