@@ -91,7 +91,7 @@ export function Avatar(props) {
 
   useEffect(() => {
     //Set cursor follow
-    if (snap.about || snap.contact) {
+    if (snap.intro || snap.contact) {
       cursorFollow = true;
     }
     if(snap.isMenuOpen) {
@@ -109,7 +109,7 @@ export function Avatar(props) {
       actions[animation].setLoop(THREE.LoopRepeat, 3).clampWhenFinished = true;
     }
     
-    actions[animation].reset().fadeIn(0.5).play();
+    actions[animation].reset().fadeIn(0).play();
     return () => {
       actions[animation].reset().fadeOut(0.5);
   

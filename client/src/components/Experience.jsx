@@ -83,8 +83,9 @@ export const Experience = () => {
           position={isTablet ? [0, 1.8, -5] : [1, 1.8, -5]}
           rotation={[0, 0, 0]}
           scale={isTablet ? 0.7 : 1.2}
-          color={0x403e3e}
+          color={0x4202125}
           visible={isMobile ? snap.isVisible : !snap.isVisible}
+          font={"fonts/Poppins-Regular.ttf"}
           // color={snap.intro || snap.projects ? 0x403e3e : 0xcccccc}
           // anchorX="center"
         >
