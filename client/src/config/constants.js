@@ -1,4 +1,4 @@
-import { portfolio, barbershop, dashboard, tshirt } from "../assets";
+import { portfolio, barbershop, dashboard, tshirt, plane } from "../assets";
 
 
 export const AboutTabs = [
@@ -24,34 +24,40 @@ export const framerMotionConfig = {
 
 export const projects = [
   {
-    title: "Portfolio 2023",
-    description: "React, Sass",
-    url: "https://sidneyo23.netlify.app/",
-    img: portfolio,
+    title: 'FlyteLine',
+    description: 'React Three Fiber, CSS',
+    url: 'https://flyteline.netlify.app/',
+    image: plane,
   },
   {
-    title: 'Cyber Dashboard',
-    description: 'React, Tailwind, Leaflet, ChartJs',
-    url: 'https://cybersecurity-dashboard.netlify.app/',
-    img: dashboard,
+    title: "Old Portfolio",
+    description: "React, Sass",
+    url: "https://sidneyo23.netlify.app/",
+    image: portfolio,
   },
   {
     title: `Tshirt Customizer`,
     description: 'React Three Fiber, Tailwind',
     url: 'https://clothing-customizer.netlify.app/',
-    img: tshirt
+    image: tshirt
   },
   {
-    title: 'The W HairLoft',
-    description: 'Gatsby, Contentful CMS, GraphQL',
-    url: 'https://thewhairloft.netlify.app/',
-    img: barbershop
+    title: 'Cyber Dashboard',
+    description: 'React, Tailwind, Leaflet, ChartJs',
+    url: 'https://cybersecurity-dashboard.netlify.app/',
+    image: dashboard,
   },
+  // {
+  //   title: 'The W HairLoft',
+  //   description: 'Gatsby, Contentful CMS, GraphQL',
+  //   url: 'https://thewhairloft.netlify.app/',
+  //   img: barbershop
+  // },
 ]
 
 export const skillset = [
   {
-    name: "React JS",
+    name: "Reactjs",
     level: 80,
   },
   {

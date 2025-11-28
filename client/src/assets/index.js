@@ -7,8 +7,9 @@ import box from "./box.png"
 import pin from "./pin.png"
 import file from "./file.png"
 import contactText from "./contact-text.svg"
+import plane from './plane.png'
 
 import resume from "./Sidney-Oluoch-resume.pdf"
 
 
-export { logo, portfolio, barbershop, dashboard, tshirt, box, pin, file, contactText, resume};
+export { logo, portfolio, barbershop, dashboard, tshirt, box, pin, file, contactText, resume, plane};

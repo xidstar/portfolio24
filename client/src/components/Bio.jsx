@@ -28,14 +28,14 @@ const Bio = () => {
           captivating.
         </motion.p>
         <br />
-        <motion.p
+        {/* <motion.p
           className="text-xl 2xl:text-2xl text-left"
           {...headTextAnimation}
         >
           I'm passionate about translating ideas and brand values into
           eye-catching, user-centered digital solutions. I'm a strong advocate
           for great design, in all its forms.
-        </motion.p>
+        </motion.p> */}
 
         <motion.div className="py-2 sm:mt-[2rem]">
           <div className="img-wrapper gap-5 flex flex-col">

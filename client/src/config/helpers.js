@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useSnapshot } from "valtio";
 
 import state from "../store";
