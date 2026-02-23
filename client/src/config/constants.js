@@ -1,4 +1,4 @@
-import { portfolio, barbershop, dashboard, tshirt, plane, wtrust, lenels2 } from "../assets";
+import { portfolio, dashboard, tshirt, plane, wtrust, lenels2 } from "../assets";
 
 
 export const AboutTabs = [
@@ -30,16 +30,16 @@ export const projects = [
     image: plane,
   },
   {
-    title: 'Wilmington Trust',
-    description: 'HTML, CSS, Javascript',
-    url: 'https://www.wilmingtontrust.com/',
-    image: wtrust,
-  },
-  {
     title: "Old Portfolio",
     description: "React, Sass",
     url: "https://sidneyo23.netlify.app/",
     image: portfolio,
+  },
+  {
+    title: 'Wilmington Trust',
+    description: 'HTML, CSS, Javascript',
+    url: 'https://www.wilmingtontrust.com/',
+    image: wtrust,
   },
   {
     title: `Tshirt Customizer`,

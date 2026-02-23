@@ -21,7 +21,7 @@ const Menu = () => {
         onClick={() => {
           state.isMenuOpen = !snap.isMenuOpen;
         }}
-        className={`text-[2.5rem] z-30 top-7 right-5 xl:right-10 absolute`}
+        className={`text-[2.5rem] hover:text-[#d61a39] z-30 top-7 right-5 xl:right-10 absolute`}
       >
         {snap.isMenuOpen ? (
           <VscChromeClose className="stroke-black" />
