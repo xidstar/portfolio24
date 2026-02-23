@@ -1,4 +1,4 @@
-import { portfolio, barbershop, dashboard, tshirt, plane } from "../assets";
+import { portfolio, barbershop, dashboard, tshirt, plane, wtrust, lenels2 } from "../assets";
 
 
 export const AboutTabs = [
@@ -30,6 +30,12 @@ export const projects = [
     image: plane,
   },
   {
+    title: 'Wilmington Trust',
+    description: 'HTML, CSS, Javascript',
+    url: 'https://www.wilmingtontrust.com/',
+    image: wtrust,
+  },
+  {
     title: "Old Portfolio",
     description: "React, Sass",
     url: "https://sidneyo23.netlify.app/",
@@ -42,42 +48,46 @@ export const projects = [
     image: tshirt
   },
   {
+    title: 'Lenels2',
+    description: 'Asp.Net, CSS, Javascript',
+    url: 'https://buildings.honeywell.com/us/en/brands/our-brands/lenels2',
+    image: lenels2,
+  },
+  {
     title: 'Cyber Dashboard',
     description: 'React, Tailwind, Leaflet, ChartJs',
     url: 'https://cybersecurity-dashboard.netlify.app/',
     image: dashboard,
   },
-  // {
-  //   title: 'The W HairLoft',
-  //   description: 'Gatsby, Contentful CMS, GraphQL',
-  //   url: 'https://thewhairloft.netlify.app/',
-  //   img: barbershop
-  // },
 ]
 
 export const skillset = [
   {
-    name: "Reactjs",
-    level: 80,
+    name: "React/Typescript",
+    level: 95,
   },
   {
     name: "Javascript",
-    level: 90,
+    level: 95,
   },
   {
     name: "Threejs / React Three Fiber",
-    level: 70,
+    level: 80,
   },
   {
     name: "Nextjs",
-    level: 70,
+    level: 90,
   },
   {
     name: "Nodejs",
-    level: 70,
+    level: 95,
   },
   {
-    name: ".Net Framework",
+    name: "ASP.NET Framework",
     level: 80,
+  },
+  {
+    name: "CSS3 / TailwindCSS / SASS",
+    level: 99,
   },
 ]

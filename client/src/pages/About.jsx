@@ -21,7 +21,7 @@ import { AboutTabs } from "../config/constants";
 
 const About = () => {
   const snap = useSnapshot(state);
-  const [isActiveTab, setIsActiveTab] = useState("Bio");
+  const [isActiveTab, setIsActiveTab] = useState("Skills");
   const [ping] = useState(new Audio(tabSound));
 
   const generateTabContent = () => {
@@ -45,7 +45,7 @@ const About = () => {
               className={`content-wrapper flex flex-col justify-around w-full h-full md:w-2/3 md:h-2/3 xl:w-1/2 p-3 xl:p-10 rounded-lg `}
               {...headTextAnimation}
             >
-              <div className="tab-title-wrapper flex flex-col items-center justify-center pb-10"></div>
+              <div className="tab-title-wrapper flex flex-col items-center justify-center"></div>
 
               <div className="btn-wrapper flex justify-center md:justify-start gap-10 w-full">
                 {AboutTabs.map((tab) => (

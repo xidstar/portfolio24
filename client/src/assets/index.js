@@ -8,8 +8,10 @@ import pin from "./pin.png"
 import file from "./file.png"
 import contactText from "./contact-text.svg"
 import plane from './plane.png'
+import wtrust from './wtrust.png'
+import lenels2 from './lenels2.png'
 
 import resume from "./Sidney-Oluoch-resume.pdf"
 
 
-export { logo, portfolio, barbershop, dashboard, tshirt, box, pin, file, contactText, resume, plane};
+export { logo, portfolio, barbershop, dashboard, tshirt, box, pin, file, contactText, resume, plane, wtrust, lenels2};

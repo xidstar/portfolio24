@@ -245,7 +245,7 @@ const Carousel = () => {
             key={index}
             onClick={() => setActiveSlideIndex(index)}
             className={`w-3 h-3 rounded-full transition-all ${
-              index === activeSlideIndex ? 'bg-blue-500 scale-125' : 'bg-gray-300 hover:bg-gray-400'
+              index === activeSlideIndex ? 'bg-purple-700 scale-125' : 'bg-gray-300 hover:bg-gray-400'
             }`}
           />
         ))}
