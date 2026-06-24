@@ -30,16 +30,16 @@ export const projects = [
     image: plane,
   },
   {
-    title: "Old Portfolio",
-    description: "React, Sass",
-    url: "https://sidneyo23.netlify.app/",
-    image: portfolio,
-  },
-  {
     title: 'Wilmington Trust',
     description: 'HTML, CSS, Javascript',
     url: 'https://www.wilmingtontrust.com/',
     image: wtrust,
+  },
+  {
+    title: 'Cyber Dashboard',
+    description: 'React, Tailwind, Leaflet, ChartJs',
+    url: 'https://cybersecurity-dashboard.netlify.app/',
+    image: dashboard,
   },
   {
     title: `Tshirt Customizer`,
@@ -54,10 +54,10 @@ export const projects = [
     image: lenels2,
   },
   {
-    title: 'Cyber Dashboard',
-    description: 'React, Tailwind, Leaflet, ChartJs',
-    url: 'https://cybersecurity-dashboard.netlify.app/',
-    image: dashboard,
+    title: "Old Portfolio",
+    description: "React, Sass",
+    url: "https://sidneyo23.netlify.app/",
+    image: portfolio,
   },
 ]
 
@@ -79,15 +79,15 @@ export const skillset = [
     level: 90,
   },
   {
-    name: "Nodejs",
-    level: 95,
+    name: "CMS (Contentful, Kentico, Sharepoint)",
+    level: 85,
   },
   {
     name: "ASP.NET Framework",
     level: 80,
   },
   {
-    name: "CSS3 / TailwindCSS / SASS",
+    name: "CSS / TailwindCSS / SASS",
     level: 99,
   },
 ]

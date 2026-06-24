@@ -63,7 +63,7 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        <div className="">
+        <div className="hidden md:block">
           <h3 className="py-5 text-icon text-2xl xl:text-3xl font-bold">
             Design Tools
           </h3>
@@ -77,7 +77,7 @@ const Skills = () => {
             <p>Procreate</p>
           </div>
 
-          <div className="resume-wrapper flex">
+          <div className="hidden resume-wrapper md:flex">
             <div className="flex items-center relative h-[5rem]">
               <img
                 src={file}

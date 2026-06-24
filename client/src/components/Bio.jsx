@@ -39,7 +39,7 @@ const Bio = () => {
 
         <motion.div className="py-2 sm:mt-[2rem]">
           <div className="img-wrapper gap-5 flex flex-col">
-            <div className="flex items-center">
+            <div className="hidden md:flex items-center">
               <motion.img
                 src={pin}
                 alt="blender"

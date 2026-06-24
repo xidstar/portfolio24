@@ -10,7 +10,7 @@ const PERSPECTIVE = 1200; // Perspective value for 3D effect
 const ROTATE_ANGLE = 50; // Degrees of rotation towards center
 
 const Carousel = () => {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(2);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   // Helper to derive styles based on an item's position relative to the active one
   const getCardStyles = (i, currentActiveIndex) => {
