@@ -111,9 +111,8 @@ html {
 }
 
 .menu-wrapper button:hover {
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
   color: #f1415e;
-  font-family: 'Caveat', cursive;
   font-style: bold;
   font-size: 2.5rem;
 }

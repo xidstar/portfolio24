@@ -15,16 +15,16 @@ const Bio = () => {
       <div
         className={`tabcontent-container sm:p-5 sm:h-[50vh] relative`}
       >
-        <h4 className="font-bold text-icon text-[1.5rem] xl:text-3xl pb-5 sm:pb-10">
+        <h4 className="font-bold text-icon text-[1.5rem] xl:text-3xl py-5 sm:pb-10">
           "Passionately Curious..."
         </h4>
         <motion.p
           className="text-xl 2xl:text-2xl text-left"
           {...headTextAnimation}
         >
-          I'm a creative web developer with a keen focus on interactivity,
+          I'm a creative front end developer with a keen focus on interactivity,
           motion design and building appealing web experiences. I believe in
-          crafting web experiences that are not just functional but also
+          crafting web experiences that are not just clean, functional and intuitive, but also
           captivating.
         </motion.p>
         <br />
@@ -51,7 +51,7 @@ const Bio = () => {
                   className="text-icon font-bold text-[1.3rem] xl:text-3xl xl
                 :pb-2"
                 >
-                  Maryland, US
+                  Washington, DC
                 </p>
                 <Underline />
               </div>

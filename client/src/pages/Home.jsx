@@ -20,7 +20,7 @@ const Home = () => {
     <AnimatePresence>
       {snap.intro && (
         <motion.section
-          className="flex flex-col justify-center h-[90%] md:h-screen w-full p-4 md:max-w-screen-xl 2md:max-w-screen-2xl mx-auto items-start"
+          className="flex flex-col justify-center h-[90%] md:h-screen w-full p-4 md:max-w-screen-xl mx-auto items-start"
           {...slideAnimation("left")}
         >
           <motion.div
@@ -41,15 +41,15 @@ const Home = () => {
                   <Underline />
                 </span>
               </motion.h1>
-              <br />
+              <br className="hidden md:block" />
               <motion.div {...headTextAnimation}>
                 <h3 className="text-xl md:text-2xl font-bold">
-                  Front End / Creative Developer
+                  Front End Developer
                 </h3>
               </motion.div>
 
               <motion.h3
-                className="text-xl md:text-2xl py-5"
+                className="text-lg md:text-2xl py-2 md:py-5"
                 {...headTextAnimationDelay}
               >
                 I develop websites, user interfaces, web applications, and 2D &

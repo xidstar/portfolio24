@@ -141,7 +141,7 @@ const Carousel = () => {
           return (
             <animated.div
               key={slide.id}
-              className={`absolute top-0 will-change-transform transform-style-3d ${
+              className={`absolute top-0 flex items-center justify-center will-change-transform transform-style-3d ${
                 isCurrent ? 'cursor-default' : 'cursor-pointer'
               }`}
               style={{
@@ -158,13 +158,11 @@ const Carousel = () => {
                 transformStyle: 'preserve-3d',
               }}
             >
-              {/* Card Content - Make entire card clickable if it has a URL */}
-              {slide.url ? (
-                <a 
+              <a 
                   href={slide.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="block w-full h-full transform-style-3d"
+                  className="block w-full md:h-full transform-style-3d"
                   style={{ transformStyle: 'preserve-3d' }}
                   onClick={(e) => {
                     // Only prevent default if it's a side card (to allow navigation)
@@ -176,7 +174,7 @@ const Carousel = () => {
                   }}
                 >
                   <div 
-                    className={`w-full h-full rounded-[2rem] overflow-hidden shadow-2xl ${slide.bgColor} relative transform-style-3d`}
+                    className={`w-full h-[300px] md:h-full rounded-[2rem] overflow-hidden shadow-2xl ${slide.bgColor} relative transform-style-3d`}
                     style={{ transformStyle: 'preserve-3d' }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
@@ -186,7 +184,7 @@ const Carousel = () => {
                       className="w-full h-full object-cover select-none"
                       draggable="false"
                     />
-                    <div className="absolute bottom-8 left-0 right-0 text-center z-20">
+                    <div className="absolute bottom-8 left-0 right-0 text-center z-20 hidden md:block">
                       <h3 className="text-white text-xl font-bold tracking-widest uppercase">
                         {slide.title.split(" ")[0]}
                       </h3>
@@ -198,45 +196,17 @@ const Carousel = () => {
                     </div>
                   </div>
                 </a>
-              ) : (
-                // If no URL, make the card clickable for navigation only if it's a side card
-                <div 
-                  className={`w-full h-full rounded-[2rem] overflow-hidden shadow-2xl ${slide.bgColor} relative transform-style-3d ${
-                    !isCurrent ? 'cursor-pointer' : ''
-                  }`}
-                  style={{ transformStyle: 'preserve-3d' }}
-                  onClick={() => !isCurrent && handleCardClick(i)}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
-                  <img
-                    src={slide.image}
-                    alt={slide.title}
-                    className="w-full h-full object-cover select-none"
-                    draggable="false"
-                  />
-                  <div className="absolute bottom-8 left-0 right-0 text-center z-20">
-                    <h3 className="text-white text-xl font-bold tracking-widest uppercase">
-                      {slide.title.split(" ")[0]}
-                    </h3>
-                    {slide.title.split(" ")[1] && (
-                      <span className="text-gray-300 text-sm uppercase tracking-wider block mt-1">
-                        {slide.title.split(" ").slice(1).join(" ")}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              )}
             </animated.div>
           );
         })}
       </div>
 
       {/* Active Title Indicator */}
-      {/* <div className="mt-4 text-center">
-        <h2 className="text-xl font-medium text-gray-800 transition-all duration-300">
+      <div className="text-center md:hidden">
+        <h2 className="text-xl font-bold text-slate-900 transition-all duration-300">
           {projects[activeSlideIndex]?.title || ''}
         </h2>
-      </div> */}
+      </div>
 
       {/* Dots Indicator */}
       <div className="flex space-x-2 mt-6">

@@ -26,7 +26,7 @@ const About = () => {
 
   const generateTabContent = () => {
     switch (isActiveTab) {
-      case "Bio":
+      case "About":
         return <Bio />;
       case "Skills":
         return <Skills />;
@@ -40,7 +40,7 @@ const About = () => {
     <AnimatePresence>
       {snap.about && (
         <>
-          <motion.section className="flex flex-col justify-center h-[88%] w-full p-4 md:max-w-screen-xl  mx-auto items-start">
+          <motion.section className="flex flex-col justify-center min-h-[90vh] md:min-h-0 md:h-[50%] w-full p-4 md:max-w-screen-xl mx-auto items-start">
             <motion.div
               className={`content-wrapper flex flex-col justify-around w-full h-full md:w-2/3 md:h-2/3 xl:w-1/2 p-3 xl:p-10 rounded-lg `}
               {...headTextAnimation}
@@ -57,7 +57,6 @@ const About = () => {
                         ping.volume = 0.08;
                         {snap.isPlaying ? ping.play() : ""}
                         setIsActiveTab(tab.title)
-
                       }}
                       customStyles={`${
                         isActiveTab === tab.title
@@ -73,6 +72,7 @@ const About = () => {
               </div>
             </motion.div>
           </motion.section>
+          
           <motion.div
             className="page-buttons absolute flex w-full justify-center bottom-10"
             {...headContentAnimation}

@@ -14,7 +14,7 @@ const Skills = () => {
       <div
         className={`tabcontent-container md:h-[50vh]`}
       >
-        <h3 className="py-5 text-icon text-2xl xl:text-3xl font-bold">
+        <h3 className="py-2 pt-5 text-icon text-2xl xl:text-2xl font-bold">
           Development
         </h3>
 
@@ -64,7 +64,7 @@ const Skills = () => {
         </motion.div>
 
         <div className="hidden md:block">
-          <h3 className="py-5 text-icon text-2xl xl:text-3xl font-bold">
+          <h3 className="py-2 md:py-5 text-icon text-2xl xl:text-2xl font-bold">
             Design Tools
           </h3>
 
@@ -88,7 +88,7 @@ const Skills = () => {
                 <a
                   href={resume}
                   target="_blank"
-                  className="resume relative text-icon text-center md:text-left font-bold text-2xl xl:text-3xl xl
+                  className="resume relative text-icon text-center md:text-left font-bold text-2xl xl
                 :pb-2 z-10 hover:scale-110 transition ease-in-out"
                 >
                   Resume

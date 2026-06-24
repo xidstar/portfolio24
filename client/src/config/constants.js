@@ -3,10 +3,10 @@ import { portfolio, dashboard, tshirt, plane, wtrust, lenels2 } from "../assets"
 
 export const AboutTabs = [
   {
-    title: "Bio",
+    title: "Skills",
   },
   {
-    title: "Skills",
+    title: "About",
   },
   // {
   //   title: "Resume",
