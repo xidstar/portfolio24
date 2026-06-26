@@ -38,9 +38,10 @@ const Contact = () => {
                   <a
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=sidneyo254@gmail.com"
                     target="_blank"
-                    className="flex items-center text-black hover:text-[#cd455b] gap-10"
+                    className="flex items-center text-black gap-10 hover:text-[#a03333] "
                   >
-                    <span className="text-icon text-[3rem] md:text-[6rem] font-bold tracking-tight">
+                    <span className="text-icon text-[3rem] md:text-[6rem] font-bold tracking-tight hover:underline 
+                    -hover:underline-offset-8 hover:scale-105">
                       Let's Talk!
                     </span>
                     <div>
@@ -51,7 +52,7 @@ const Contact = () => {
                         <img
                           src={contactText}
                           alt="contact"
-                          className="contact-spin z-1 w-full h-full"
+                          className="contact-spin z-1 w-full h-full hover:text-[#cd455b]"
                         />
                         <span className="absolute mx-auto" >
                           <TbMailShare className="text-[3rem] cursor-pointer relative z-3 fill-[#ccc] hover:scale-110 transition-all ease-in-out" />

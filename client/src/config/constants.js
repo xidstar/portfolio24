@@ -71,7 +71,7 @@ export const skillset = [
     level: 95,
   },
   {
-    name: "Threejs / React Three Fiber",
+    name: "Threejs / React Three Fiber / WebGL",
     level: 80,
   },
   {
@@ -89,5 +89,9 @@ export const skillset = [
   {
     name: "CSS / TailwindCSS / SASS",
     level: 99,
+  },
+  {
+    name: "APIs & Integration",
+    level: 90,
   },
 ]
